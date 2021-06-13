@@ -605,7 +605,7 @@ header .beautiful-girl {
   flex-direction: column;
   overflow: auto;
   height: 100vh;
-  background-color: #000;
+  background-color: #161616;
 }
 .buy-now-section h2,
 .buy-now-section .wrapper {
@@ -615,15 +615,15 @@ header .beautiful-girl {
   padding-top: 2em;
   color: #f3f3f3;
   font-size: 2em;
-  font-weight: 500;
-  text-align: center;
+  font-weight: 400;
+  margin-left: 2em;
 }
 .buy-now-section h2::after {
   display: block;
+  margin-top: 0.3em;
   width: 150px;
   content: " ";
   border: 1px solid #fff;
-  margin: 10px auto;
 }
 .buy-now-section .wrapper {
   margin-top: 3em;
@@ -635,10 +635,44 @@ header .beautiful-girl {
 .buy-now-section .wrapper .left {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  padding-left: 3em;
+  padding-top: 1em;
 }
-.buy-now-section .wrapper .left p {
+.buy-now-section .wrapper .left p,
+.buy-now-section .wrapper .left h4 {
   color: #e7e7e7;
+  margin-bottom: 1em;
+}
+.buy-now-section .wrapper .left h4 {
+  font-weight: 400;
+}
+.buy-now-section .wrapper .left .colors {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  height: 40px;
+  width: auto;
+  align-self: flex-start;
+}
+.buy-now-section .wrapper .left .colors .btn {
+  border: 0;
+  margin-right: 0.5em;
+  width: 40px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.buy-now-section .wrapper .left .colors .btn-red {
+  background-color: red;
+}
+.buy-now-section .wrapper .left .colors .btn-black {
+  background-color: black;
+}
+.buy-now-section .wrapper .left .colors .btn-white {
+  background-color: white;
+}
+.buy-now-section .wrapper .left .colors .btn-blue {
+  background: blue;
 }
 /* ----------------------------------------------- */
 /* FOOTER */
