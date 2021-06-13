@@ -1,0 +1,84 @@
+@use 'colors';
+@import "mixins";
+
+/* ----------------------------------------------- */
+/* HEADER 
+/* ----------------------------------------------- */
+
+header {
+  grid-area: header;
+  @include elementBG(
+    "images/features-background-listendhd.svg",
+    "clean",
+    100vh,
+    fixed
+  );
+
+  .hero-text {
+    position: absolute;
+    transform: translate(15%, 60%);
+    letter-spacing: 3px;
+
+    .hero-child-big {
+      font-size: 220%;
+    }
+
+    .hero-child {
+      font-weight: 300;
+      display: block;
+    }
+  }
+
+  .beautiful-girl {
+    position: absolute;
+    right: 35px;
+    height: 450px;
+    transform: translateY(10%);
+    filter: opacity(90%);
+  }
+}
+
+/* ------ Main Site Navigation ------*/
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* ------ Site Core Logo ------*/
+
+  .core-icon {
+    height: 100px;
+    margin-top: 40px;
+  }
+}
+
+.main-nav-links {
+  margin-top: 60px;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-left: 30px;
+
+    .normal-link:link,
+    .normal-link:visited {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
+      transition: all 0.4s;
+    }
+
+    .normal-link:hover,
+    .normal-link:active {
+      color: colors.$linkHvrColor;
+      border-bottom: 2px solid colors.$linkHvrColor;
+    }
+
+    .special-link {
+      .cart {
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
+}

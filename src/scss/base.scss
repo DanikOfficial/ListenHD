@@ -1,0 +1,65 @@
+@use 'colors';
+
+/*--------------------------------------- Base stylesheets ------------------------------------------- */
+
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 18px;
+  color: colors.$textColor;
+  text-rendering: optimizeLegibility;
+  font-family: "Neusa Next Pro", "Arial", sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+.row {
+  margin: 0 70px;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+/* --------- Headings ---------- */
+
+/* ----- Links ----- */
+a {
+  color: colors.$linkColor;
+  text-decoration: none;
+}
+
+/* ----- Button ------ */
+
+.special-link:link,
+.special-link:visited {
+  border: 2px solid colors.$borderColor;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.special-link:hover,
+.special-link:active {
+  background-color: colors.$hoverBgColor;
+  color: #fff;
+}
+
+/* ------ Reusable Box ----------- */

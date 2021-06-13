@@ -1,0 +1,64 @@
+@use 'colors';
+
+// Background of sections that block the whole Viewport
+@mixin elementBG($bgUrl, $colorWeight, $viewportHeight, $position) {
+  height: $viewportHeight;
+  @if $colorWeight == "dark" {
+    background: linear-gradient(rgba(0, 0, 0, 0.035), rgba(0, 0, 0, 0.035)),
+      url($bgUrl);
+  }
+  @if $colorWeight == "clean" {
+    background: url($bgUrl);
+  }
+  background-position: center;
+  background-size: cover;
+  background-attachment: $position;
+}
+
+@mixin reusable-box($width, $behaviour) {
+  .box {
+    width: $width;
+    margin-right: 3em;
+    background-color: colors.$bg-color;
+    padding: 2em;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+    p,
+    h2 {
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      font-size: 160%;
+      font-weight: 500;
+
+      span {
+        display: block;
+      }
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+
+  @if $behaviour == "increase" {
+    .box:hover {
+      width: 410px;
+    }
+  }
+
+  @if $behaviour == "decrease" {
+    .box:hover {
+      width: 470px;
+    }
+  }
+}
+
+@mixin flex-center-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
