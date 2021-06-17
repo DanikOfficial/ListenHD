@@ -1,0 +1,80 @@
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 3em;
+  background-color: colors.$bg-color;
+
+  h2 {
+    color: colors.$baseColor;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  h2::after {
+    display: block;
+    margin: 0.3em auto;
+    width: 250px;
+    content: " ";
+    border: 1px solid colors.$baseColor;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 350px;
+    }
+  }
+
+  .right {
+    color: colors.$baseColor;
+
+    p,
+    .message,
+    .email {
+      margin-bottom: 2em;
+    }
+
+    .email,
+    .message {
+      width: 80%;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .email::placeholder,
+    .message::placeholder {
+      color: colors.$baseColor;
+    }
+
+    p {
+      font-weight: 400;
+      width: 80%;
+    }
+
+    .message {
+      resize: none;
+      border: 0;
+      height: 250px;
+      background: #fff;
+      padding: 1em;
+    }
+
+    .email {
+      border: 0;
+      height: 40px;
+      padding-left: 1em;
+      display: block;
+    }
+
+    .send-email {
+      padding: 8px 40px;
+      background-color: #ffd616;
+      font-weight: 400;
+    }
+  }
+}

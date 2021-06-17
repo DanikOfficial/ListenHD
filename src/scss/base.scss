@@ -63,3 +63,11 @@ a {
 }
 
 /* ------ Reusable Box ----------- */
+
+.wrapper {
+  margin-top: 3em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "left right";
+}

@@ -1,0 +1,138 @@
+.buy-now-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: colors.$bg-color-darker;
+  padding-left: 3.5em;
+  padding-top: 3em;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2,
+  .wrapper {
+    margin-left: 1.5em;
+  }
+
+  h2 {
+    padding-top: 1em;
+    color: colors.$textColorWhite;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0 auto 0.1em;
+  }
+
+  h2::after {
+    display: block;
+    margin: 0.3em auto;
+    width: 150px;
+    content: " ";
+    border: 1px solid colors.$hoverTextColor;
+  }
+
+  .left {
+    p,
+    h4 {
+      color: colors.$textColorWhite;
+      margin-bottom: 1.5em;
+    }
+
+    p span {
+      color: colors.$reviews-colors;
+      position: relative;
+      bottom: 10px;
+    }
+
+    p {
+      width: 90%;
+      line-height: 1.3em;
+    }
+
+    h4 {
+      font-weight: 500;
+    }
+
+    .rates {
+      height: 20px;
+    }
+
+    .buy-now {
+      color: colors.$textColorWhite;
+      border: 2px solid colors.$textColorWhite;
+      align-self: flex-start;
+      padding: 4px 20px;
+      border-radius: 0.3em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .buy-now:hover {
+      background-color: colors.$bg-color;
+      color: colors.$textColor;
+    }
+  }
+
+  .right {
+    align-content: flex-start;
+
+    .slide-next {
+      padding-left: 5em;
+    }
+
+    .slide-next {
+      width: 300px;
+      margin-bottom: 1em;
+      transition: all 0.3s;
+    }
+    /*
+      .slide-next:hover {
+        width: 60%;
+        cursor: pointer;
+      }*/
+
+    .colors {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1em;
+      height: 40px;
+      width: auto;
+      padding-left: 7em;
+      margin-right: 3em;
+
+      .btn {
+        border: 0;
+        margin-right: 0.5em;
+        width: 40px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        border: 1px solid rgb(11, 131, 7);
+      }
+
+      .selected {
+        border: 1px solid rgb(11, 131, 7);
+      }
+
+      .btn-red {
+        background-color: red;
+      }
+
+      .btn-black {
+        background-color: black;
+      }
+
+      .btn-grey {
+        background-color: rgb(63, 63, 63);
+      }
+
+      .btn-gold {
+        background-color: #dfc9b6;
+      }
+    }
+  }
+}

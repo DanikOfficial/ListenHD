@@ -1,3 +1,11 @@
+@use "colors";
+
 /* ----------------------------------------------- */
 /* FOOTER */
 /* ----------------------------------------------- */
+
+.footer-section {
+  grid-area: footer;
+  height: 40vh;
+  background: colors.$baseColor;
+}

@@ -1,0 +1,33 @@
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  @include elementBG("images/section-bg.jpg", "clean", auto, fixed);
+  padding: 3em 0;
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .long-text {
+    width: 60%;
+    text-align: justify;
+    color: colors.$textColorDarker;
+    font-weight: 400;
+    margin-bottom: 4em;
+  }
+
+  h2 {
+    font-size: 240%;
+    font-weight: 400;
+  }
+
+  h2::after {
+    display: block;
+    width: 250px;
+    content: " ";
+    border: 1px solid colors.$borderColor;
+    margin: 5px auto;
+  }
+}
