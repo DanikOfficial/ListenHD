@@ -8,9 +8,8 @@ document.querySelector(".colors").addEventListener("click", (event) => {
     const imgName = classList[classList.length - 1] + ".png";
 
     if (currentImgName !== imgName) {
-      const buttons = Array.from(event.target.parentNode.childNodes);
+      const buttons = Array.from(document.querySelectorAll(".btn"));
 
-      buttons.shift();
       buttons.forEach((el) => el.classList.remove("selected"));
 
       document

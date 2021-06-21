@@ -1,7 +1,7 @@
 .get-in-touch {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 105vh;
   padding-top: 3em;
   background-color: colors.$bg-color;
 
@@ -10,6 +10,7 @@
     font-size: 2em;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 0.5em;
   }
 
   h2::after {
@@ -26,7 +27,7 @@
     justify-content: center;
 
     .img {
-      width: 350px;
+      width: 50%;
     }
   }
 
@@ -41,9 +42,10 @@
 
     .email,
     .message {
-      width: 80%;
+      width: 90%;
       border-radius: 5px;
       outline: none;
+      background-color: colors.$bg-color-white;
     }
 
     .email::placeholder,
@@ -53,14 +55,13 @@
 
     p {
       font-weight: 400;
-      width: 80%;
+      width: 90%;
     }
 
     .message {
       resize: none;
       border: 0;
       height: 250px;
-      background: #fff;
       padding: 1em;
     }
 
@@ -73,8 +74,18 @@
 
     .send-email {
       padding: 8px 40px;
-      background-color: #ffd616;
+      color: colors.$textColorWhite;
+      background-color: colors.$baseColor;
+      border: 2px solid transparent;
       font-weight: 400;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .send-email:hover {
+      border: 2px solid colors.$baseColor;
+      color: colors.$baseColor;
+      background: transparent;
     }
   }
 }

@@ -4,25 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>ListenHD</title>
   </head>
   <body>
     <header class="header-section">
       <nav class="main-nav row">
         <a href="#"
-          ><img class="core-icon" src="dist/images/logo.png" alt="logo"
+          ><img class="core-icon" src="images/logo.png" alt="logo"
         /></a>
         <ul class="main-nav-links">
           <li><a class="normal-link" href="#">Home</a></li>
-          <li><a class="normal-link" href="#">Overview</a></li>
-          <li><a class="normal-link" href="#">Features</a></li>
-          <li><a class="normal-link" href="#">Order Yours</a></li>
-          <li><a class="normal-link" href="#">Pricing</a></li>
+          <li><a class="normal-link" href="#overview">Overview</a></li>
+          <li><a class="normal-link" href="#features">Features</a></li>
+          <li><a class="normal-link" href="#get-in-touch">Get In Touch</a></li>
           <li>
-            <a class="special-link" href="#"
-              >Buy Now! <img class="cart" src="dist/images/cart.svg"
-            /></a>
+            <a class="special-link" href="#buy-now">Order Now</a>
           </li>
         </ul>
       </nav>
@@ -33,10 +30,10 @@
           <span class="hero-child"> Premium Quality</span>
         </span>
       </h1>
-      <img class="beautiful-girl" src="dist/images/enjoying-sound.png" alt="" />
+      <img class="beautiful-girl" src="images/enjoying-sound.png" alt="" />
     </header>
     <main class="main-section">
-      <section class="overview-section">
+      <section id="overview" class="overview-section">
         <h2>Be at one with your music</h2>
         <p class="long-text">
           Discover how the ListenHD XR500 headphones blend our most advanced
@@ -47,7 +44,7 @@
           <div class="box">
             <img
               class="microphone"
-              src="dist/images/industry-leading.png"
+              src="images/industry-leading.png"
               alt="industry-leading"
             />
 
@@ -63,11 +60,7 @@
           </div>
 
           <div class="box">
-            <img
-              class="wireless"
-              src="dist/images/wireless-premium.png"
-              alt=""
-            />
+            <img class="wireless" src="images/wireless-premium.png" alt="" />
             <h3>Wireless freedom, premium sound</h3>
             <p>
               LDAC transmits approximately three times more data (at the maximum
@@ -81,7 +74,7 @@
           <div class="box">
             <img
               class="ear"
-              src="dist/images/smart-listening-technology.png"
+              src="images/smart-listening-technology.png"
               alt=""
             />
             <h3>Smart listening technology</h3>
@@ -93,10 +86,10 @@
           </div>
         </section>
       </section>
-      <section class="features">
+      <section id="features" class="features">
         <section class="feature feature-one">
           <div class="feature-image">
-            <img src="dist/images/Industry-noise-listenhd.svg" alt="" />
+            <img src="images/Industry-noise-listenhd.svg" alt="" />
           </div>
           <div class="feature-desc">
             <h2>Industry-leading noise cancelation</h2>
@@ -121,12 +114,12 @@
             </p>
           </div>
           <div class="feature-image">
-            <img src="dist/images/wireless-freedom-listenhd.jpg" alt="" />
+            <img src="images/wireless-freedom-listenhd.jpg" alt="" />
           </div>
         </section>
         <section class="feature feature-three">
           <div class="feature-image">
-            <img src="dist/images/smart-listenin-listenhd.jpg" alt="" />
+            <img src="images/smart-listenin-listenhd.jpg" alt="" />
           </div>
           <div class="feature-desc">
             <h2>Smart listening technology to enhance your listening</h2>
@@ -142,7 +135,7 @@
         </section>
       </section>
 
-      <section class="buy-now-section">
+      <section id="buy-now" class="buy-now-section">
         <h2>Listen XR500 Noise Canceling Headphones</h2>
         <div class="wrapper">
           <div class="left">
@@ -152,7 +145,7 @@
             </p>
             <h4>XR500 S1MX1H</h4>
             <p>
-              <img class="rates" src="dist/images/rates.png" alt="" />
+              <img class="rates" src="images/rates.png" alt="" />
               <span>(1855+) customer reviews...</span>
             </p>
             <p>
@@ -162,11 +155,12 @@
             </p>
 
             <h4>$279.99</h4>
-            <a class="buy-now">Order!</a>
+            <a class="buy-now">Order Now!</a>
           </div>
           <div class="right">
-            <img src="dist/images/head-1.png" alt="" class="slide-next" />
+            <img src="images/head-1.png" alt="" class="slide-next" />
             <div class="colors">
+              <p><em>Pick a color!</em></p>
               <button class="btn btn-black selected head-1" />
               <button class="btn btn-red head-2" />
               <button class="btn btn-grey head-3" />
@@ -176,11 +170,11 @@
         </div>
       </section>
 
-      <section class="get-in-touch">
+      <section id="get-in-touch" class="get-in-touch">
         <h2>Get in Touch</h2>
         <div class="wrapper">
           <div class="left">
-            <img class="img" src="dist/images/get-in-touch.png" alt="" />
+            <img class="img" src="images/get-in-touch.png" alt="" />
           </div>
           <div class="right">
             <p>
@@ -194,8 +188,59 @@
         </div>
       </section>
     </main>
-    <footer class="footer-section"></footer>
-    <script src="dist/vendors/js/jquery.js"></script>
-    <script src="dist/js/script.js"></script>
+    <footer class="footer-section">
+      <div class="boxes">
+        <div class="box site-map-box">
+          <a href="#"
+            ><img class="map-icon" src="images/logo.png" alt="logo"
+          /></a>
+          <ul class="site-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#buy-now">Order Yours</a></li>
+            <li><a href="#get-in-touch">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="social-networks-box">
+          <h4>Our Social Networks</h4>
+          <ul class="social-links">
+            <li>
+              <a class="facebook"
+                ><ion-icon class="icon" name="logo-facebook"></ion-icon>Facebook
+              </a>
+            </li>
+            <li>
+              <a class="twitter"
+                ><ion-icon class="icon" name="logo-twitter"></ion-icon
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a class="instagram"
+                ><ion-icon class="icon" name="logo-instagram"></ion-icon
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a class="linkedin"
+                ><ion-icon class="icon" name="logo-linkedin"></ion-icon>Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="author-rights">Pete João Chiboleca @ All rights reserved.</p>
+    </footer>
+    <script src="vendors/js/jquery.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
