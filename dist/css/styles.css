@@ -730,7 +730,6 @@ header .beautiful-girl {
 .get-in-touch {
   display: flex;
   flex-direction: column;
-  height: 105vh;
   padding-top: 3em;
   background-color: #f7f7f7;
 }
@@ -769,7 +768,7 @@ header .beautiful-girl {
   width: 90%;
   border-radius: 5px;
   outline: none;
-  background-color: #dfdfdf;
+  background-color: #f0f0f0;
 }
 .get-in-touch .right .email::placeholder,
 .get-in-touch .right .message::placeholder {
@@ -798,6 +797,7 @@ header .beautiful-girl {
   border: 2px solid transparent;
   font-weight: 400;
   cursor: pointer;
+  margin-bottom: 2em;
   transition: all 0.3s;
 }
 .get-in-touch .right .send-email:hover {
@@ -811,8 +811,8 @@ header .beautiful-girl {
 /* ----------------------------------------------- */
 .footer-section {
   grid-area: footer;
-  height: 50vh;
   background: #272626;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -820,8 +820,9 @@ header .beautiful-girl {
   margin-top: 2em;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
-  height: 250px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
 }
 .footer-section .boxes .site-map-box,
 .footer-section .boxes .social-networks-box {
@@ -854,7 +855,6 @@ header .beautiful-girl {
   border-bottom: 2px solid transparent;
   text-decoration: none;
   transition: all 0.3s;
-  letter-spacing: 1px;
 }
 .footer-section .boxes .site-map-box .site-links li a:hover,
 .footer-section .boxes .site-map-box .site-links li a:active {
@@ -871,16 +871,26 @@ header .beautiful-girl {
   font-weight: 400;
   margin-bottom: 1.5em;
 }
-.footer-section .social-networks-box .social-links li a:link,
-.footer-section .social-networks-box .social-links li a:visited {
-  color: #e7e7e7;
-  text-decoration: none;
-  transition: all 0.3s;
-  letter-spacing: 1px;
-}
 .footer-section .social-networks-box .social-links li {
-  margin-bottom: 0.5em;
+  display: block;
+  margin-bottom: 0.6em;
   list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.footer-section .social-networks-box .social-links li .icon {
+  margin-right: 5px;
+}
+.footer-section .social-networks-box .social-links li a {
+  color: #e7e7e7;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  align-items: center;
+}
+.footer-section .social-networks-box .social-links li a span {
+  margin-top: 5px;
 }
 .footer-section .social-networks-box .social-links li .facebook:hover {
   color: #0e64e6;
@@ -902,25 +912,7 @@ header .beautiful-girl {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: #f09a9d;
-    /* Red */
-  }
-}
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    background-color: #f5cf8e;
-    /* Yellow */
-  }
-}
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-    background-color: #b2d6ff;
-    /* Blue */
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */

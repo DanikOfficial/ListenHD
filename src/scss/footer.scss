@@ -6,8 +6,8 @@
 
 .footer-section {
   grid-area: footer;
-  height: 50vh;
   background: colors.$baseColor;
+  height: auto;
   display: flex;
   flex-direction: column;
 
@@ -15,8 +15,9 @@
     margin-top: 2em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
-    height: 250px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
 
     .site-map-box,
     .social-networks-box {
@@ -54,7 +55,6 @@
         border-bottom: 2px solid transparent;
         text-decoration: none;
         transition: all 0.3s;
-        letter-spacing: 1px;
       }
 
       .site-links li a:hover,
@@ -76,17 +76,29 @@
       margin-bottom: 1.5em;
     }
 
-    .social-links li a:link,
-    .social-links li a:visited {
-      color: colors.$textColorWhite;
-      text-decoration: none;
-      transition: all 0.3s;
-      letter-spacing: 1px;
-    }
-
     .social-links li {
-      margin-bottom: 0.5em;
+      display: block;
+      margin-bottom: 0.6em;
       list-style-type: none;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      a {
+        color: colors.$textColorWhite;
+        transition: all 0.3s;
+        cursor: pointer;
+        display: flex;
+        height: 20px;
+        align-items: center;
+
+        span {
+          margin-top: 5px;
+        }
+      }
 
       .facebook:hover {
         color: rgb(14, 100, 230);
