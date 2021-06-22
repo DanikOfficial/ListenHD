@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   @include elementBG("images/section-bg.jpg", "clean", auto, fixed);
-  padding: 3em 0;
+  padding: 4em 0;
 
   h2 {
     margin-bottom: 0.5em;
@@ -29,5 +29,47 @@
     content: " ";
     border: 1px solid colors.$borderColor;
     margin: 5px auto;
+  }
+}
+
+.features-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  // border: 1px solid red;
+
+  .box {
+    width: 350px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 3;
+
+    .microphone,
+    .wireless,
+    .ear {
+      align-self: center;
+      margin-bottom: 1.5em;
+      height: 134px;
+    }
+
+    h3 {
+      font-size: 19px;
+    }
+
+    h3,
+    p {
+      margin-bottom: 1em;
+    }
+
+    p {
+      text-align: start;
+    }
+
+    a {
+      align-self: flex-start;
+    }
   }
 }

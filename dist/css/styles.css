@@ -481,13 +481,13 @@ header .beautiful-girl {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   background: url("images/section-bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 3em 0;
+  padding: 4em 0;
 }
 .overview-section h2 {
   margin-bottom: 0.5em;
@@ -517,15 +517,13 @@ header .beautiful-girl {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  z-index: 22;
 }
 .features-boxes .box {
   width: 350px;
   display: flex;
   height: auto;
   flex-direction: column;
-  margin-bottom: 1em;
-  margin-left: 4em;
+  flex-shrink: 3;
 }
 .features-boxes .box .microphone,
 .features-boxes .box .wireless,
@@ -612,7 +610,6 @@ header .beautiful-girl {
 .buy-now-section {
   display: flex;
   flex-direction: column;
-  height: 105vh;
   background-color: #131313;
   padding-left: 3.5em;
   padding-top: 3em;
@@ -911,8 +908,104 @@ header .beautiful-girl {
   color: #e7e7e7;
 }
 
-/* Mobile Styles */
-/* Tablet Styles */
-/* Desktop Styles */
+/* Small phones: from 0 to 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    margin: 3em 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "left" "right";
+  }
+
+  .main-nav .core-icon {
+    height: 60px;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  .main-nav .main-nav-links {
+    display: none;
+  }
+
+  .overview-section h2 {
+    font-size: 180%;
+    margin-bottom: 1em;
+  }
+  .overview-section .long-text {
+    min-width: 80%;
+    margin-bottom: 2em;
+  }
+
+  .features-boxes {
+    flex-direction: column;
+  }
+  .features-boxes .box {
+    width: 100%;
+    padding: 2em 3em;
+  }
+  .features-boxes .box h3 {
+    font-size: 110%;
+    margin-bottom: 0.3em;
+  }
+  .features-boxes .box p {
+    width: 100%;
+    text-align: justify;
+  }
+  .features-boxes .box .microphone,
+.features-boxes .box .wireless,
+.features-boxes .box .ear {
+    height: 5em;
+  }
+  .features-boxes .box:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .get-in-touch h2 {
+    font-size: 180%;
+  }
+  .get-in-touch h2::after {
+    display: block;
+    width: 220px;
+  }
+  .get-in-touch .left .img {
+    width: 50%;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section .boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-section .boxes div {
+    margin-bottom: 2em;
+    width: 100%;
+    padding: 0 3em;
+  }
+  .footer-section .boxes .site-map-box {
+    border: 0;
+  }
+  .footer-section .boxes .site-map-box .map-icon {
+    margin-bottom: 0.5em;
+    align-self: center;
+  }
+  .footer-section .boxes .site-map-box a {
+    align-self: flex-start;
+  }
+  .footer-section .boxes .site-map-box .site-links {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+}
+/* Small phones to small tablets: from 481px to 767px */
+/* Small tablet to big tablet: from 768px to 1023px */
+/* Big tablet to 1200px (widths smaller than the 1140px row) */
 
 /*# sourceMappingURL=styles.css.map */
