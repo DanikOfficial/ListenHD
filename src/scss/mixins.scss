@@ -4,11 +4,10 @@
 @mixin elementBG($bgUrl, $colorWeight, $viewportHeight, $position) {
   height: $viewportHeight;
   @if $colorWeight == "dark" {
-    background: linear-gradient(rgba(0, 0, 0, 0.035), rgba(0, 0, 0, 0.035)),
-      url($bgUrl);
+    background-color: #f3c702;
   }
   @if $colorWeight == "clean" {
-    background: url($bgUrl);
+    background-color: #ffd200;
   }
   background-position: center;
   background-size: cover;

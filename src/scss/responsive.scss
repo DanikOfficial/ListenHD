@@ -15,6 +15,12 @@
       "right";
   }
 
+  .header-section,
+  .overview-section,
+  .features {
+    background-attachment: scroll;
+  }
+
   .header-section {
     .hero-wrapper {
       display: flex;
@@ -65,15 +71,17 @@
     }
 
     .menu-icon {
+      display: block;
       font-size: 38px;
       cursor: pointer;
       margin-top: 0.2em;
     }
   }
 
+  // Overview Section
   .overview-section {
     h2 {
-      font-size: 140%;
+      font-size: 180%;
       margin-bottom: 1.5em;
       font-weight: 400;
     }
@@ -90,6 +98,7 @@
 
   .features-boxes {
     flex-direction: column;
+    margin-bottom: 2em;
 
     .box {
       width: 100%;
@@ -118,13 +127,34 @@
     }
   }
 
+  // Features Section
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+
+    .feature {
+      width: 100%;
+      padding: 3em;
+
+      .feature-desc p {
+        width: 100%;
+        text-align: justify;
+      }
+
+      .feature-image {
+        width: 100%;
+      }
+    }
+  }
+
   //Buy now section
   .buy-now-section {
     align-items: center;
     padding: 3em 3em;
 
     h2 {
-      font-size: 125.5%;
+      font-size: 180%;
       margin-bottom: 1.5em;
     }
 

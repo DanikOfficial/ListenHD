@@ -413,7 +413,7 @@ a {
 header {
   grid-area: header;
   height: 100vh;
-  background: url("images/features-background-listendhd.svg");
+  background-color: #ffd200;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -492,7 +492,7 @@ header .beautiful-girl {
   align-items: center;
   width: 100%;
   height: auto;
-  background: url("images/section-bg.jpg");
+  background-color: #f3c702;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -523,8 +523,9 @@ header .beautiful-girl {
 .features-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 0 1em;
   width: 100%;
 }
 .features-boxes .box {
@@ -532,7 +533,6 @@ header .beautiful-girl {
   display: flex;
   height: auto;
   flex-direction: column;
-  flex-shrink: 3;
 }
 .features-boxes .box .microphone,
 .features-boxes .box .wireless,
@@ -549,7 +549,7 @@ header .beautiful-girl {
   margin-bottom: 1em;
 }
 .features-boxes .box p {
-  text-align: start;
+  text-align: justify;
 }
 .features-boxes .box a {
   align-self: flex-start;
@@ -558,13 +558,13 @@ header .beautiful-girl {
 .feature {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 5em 0;
+  padding: 4em 0;
 }
-.feature div {
-  margin-left: 4em;
+.feature div:first-of-type {
+  margin-right: 4em;
 }
 .feature .feature-image {
   width: 650px;
@@ -579,8 +579,6 @@ header .beautiful-girl {
   border-radius: 5px;
 }
 .feature .feature-desc {
-  padding: 1em;
-  margin-bottom: 1em;
   width: 450px;
 }
 .feature .feature-desc h2,
@@ -927,6 +925,12 @@ header .beautiful-girl {
     grid-template-areas: "left" "right";
   }
 
+  .header-section,
+.overview-section,
+.features {
+    background-attachment: scroll;
+  }
+
   .header-section .hero-wrapper {
     display: flex;
     flex-direction: column;
@@ -969,13 +973,14 @@ header .beautiful-girl {
     display: none;
   }
   .main-nav .menu-icon {
+    display: block;
     font-size: 38px;
     cursor: pointer;
     margin-top: 0.2em;
   }
 
   .overview-section h2 {
-    font-size: 140%;
+    font-size: 180%;
     margin-bottom: 1.5em;
     font-weight: 400;
   }
@@ -989,6 +994,7 @@ header .beautiful-girl {
 
   .features-boxes {
     flex-direction: column;
+    margin-bottom: 2em;
   }
   .features-boxes .box {
     width: 100%;
@@ -1012,12 +1018,28 @@ header .beautiful-girl {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features .feature {
+    width: 100%;
+    padding: 3em;
+  }
+  .features .feature .feature-desc p {
+    width: 100%;
+    text-align: justify;
+  }
+  .features .feature .feature-image {
+    width: 100%;
+  }
+
   .buy-now-section {
     align-items: center;
     padding: 3em 3em;
   }
   .buy-now-section h2 {
-    font-size: 125.5%;
+    font-size: 180%;
     margin-bottom: 1.5em;
   }
   .buy-now-section .wrapper .left {
