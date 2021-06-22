@@ -41,6 +41,11 @@ body {
 
 /* --------- Headings ---------- */
 
+/* --------- Paragraph ---------- */
+p {
+  line-height: 140%;
+}
+
 /* ----- Links ----- */
 a {
   color: colors.$linkColor;

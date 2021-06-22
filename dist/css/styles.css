@@ -372,6 +372,11 @@ body {
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
 /* --------- Headings ---------- */
+/* --------- Paragraph ---------- */
+p {
+  line-height: 140%;
+}
+
 /* ----- Links ----- */
 a {
   color: #090404;
@@ -424,7 +429,6 @@ header .hero-text .hero-child-big {
 header .hero-text .hero-child {
   font-weight: 300;
   display: block;
-  border: 1px solid red;
 }
 header .beautiful-girl {
   position: absolute;
@@ -439,7 +443,11 @@ header .beautiful-girl {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 3em;
   /* ------ Site Core Logo ------*/
+}
+.main-nav .menu-icon {
+  display: none;
 }
 .main-nav .core-icon {
   height: 100px;
@@ -629,7 +637,7 @@ header .beautiful-girl {
 }
 .buy-now-section h2::after {
   display: block;
-  margin: 5px auto;
+  margin: 10px auto;
   width: 150px;
   content: " ";
   border: 1px solid #fff;
@@ -920,34 +928,55 @@ header .beautiful-girl {
   }
 
   .header-section .hero-wrapper {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 90%;
+    margin: 0 3em 2em;
   }
   .header-section .hero-wrapper .hero-text {
-    display: none;
+    position: static;
+    transform: translate(0, 0);
+    letter-spacing: 3px;
+    order: 2;
+  }
+  .header-section .hero-wrapper .hero-text .hero-child-big {
+    font-size: 130%;
+  }
+  .header-section .hero-wrapper .hero-text .hero-child {
+    font-weight: 400;
+    display: block;
+    font-size: 70%;
+  }
+  .header-section .hero-wrapper .hero-text .hero-child .hero-child {
+    font-size: 100%;
   }
   .header-section .hero-wrapper .beautiful-girl {
-    position: block;
-    right: 0;
-    height: 20px;
+    position: static;
+    height: 60%;
     transform: translateY(0);
-    filter: opacity(100%);
   }
 
+  .main-nav {
+    margin: 1em 1em 0;
+  }
   .main-nav .core-icon {
     height: 60px;
-    margin-top: 1em;
-    margin-left: 1em;
+    margin: 0;
   }
   .main-nav .main-nav-links {
     display: none;
   }
+  .main-nav .menu-icon {
+    font-size: 38px;
+    cursor: pointer;
+    margin-top: 0.2em;
+  }
 
   .overview-section h2 {
     font-size: 140%;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-weight: 400;
   }
   .overview-section h2::after {
@@ -972,6 +1001,7 @@ header .beautiful-girl {
   .features-boxes .box p {
     width: 100%;
     text-align: justify;
+    line-height: 140%;
   }
   .features-boxes .box .microphone,
 .features-boxes .box .wireless,

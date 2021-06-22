@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
   }
-
+  
   h2 {
     padding-top: 1em;
     color: colors.$textColorWhite;
@@ -21,7 +21,7 @@
 
   h2::after {
     display: block;
-    margin: 5px auto;
+    margin: 10px auto;
     width: 150px;
     content: " ";
     border: 1px solid colors.$hoverTextColor;

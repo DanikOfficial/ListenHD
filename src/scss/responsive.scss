@@ -17,42 +17,64 @@
 
   .header-section {
     .hero-wrapper {
-      border: 1px solid blue;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      height: 90%;
+      margin: 0 3em 2em;
 
       .hero-text {
-        display: none;
+        position: static;
+        transform: translate(0, 0);
+        letter-spacing: 3px;
+        order: 2;
+
+        .hero-child-big {
+          font-size: 130%;
+        }
+
+        .hero-child {
+          font-weight: 400;
+          display: block;
+          font-size: 70%;
+          .hero-child {
+            font-size: 100%;
+          }
+        }
       }
 
       .beautiful-girl {
-        position: block;
-        right: 0;
-        height: 20px;
+        position: static;
+        height: 60%;
         transform: translateY(0);
-        filter: opacity(100%);
       }
     }
   }
 
   // Header Styling
   .main-nav {
+    margin: 1em 1em 0;
     .core-icon {
       height: 60px;
-      margin-top: 1em;
-      margin-left: 1em;
+      margin: 0;
     }
 
     .main-nav-links {
       display: none;
+    }
+
+    .menu-icon {
+      font-size: 38px;
+      cursor: pointer;
+      margin-top: 0.2em;
     }
   }
 
   .overview-section {
     h2 {
       font-size: 140%;
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
       font-weight: 400;
     }
 
@@ -81,6 +103,7 @@
       p {
         width: 100%;
         text-align: justify;
+        line-height: 140%;
       }
 
       .microphone,
