@@ -15,6 +15,27 @@
       "right";
   }
 
+  .header-section {
+    .hero-wrapper {
+      border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .hero-text {
+        display: none;
+      }
+
+      .beautiful-girl {
+        position: block;
+        right: 0;
+        height: 20px;
+        transform: translateY(0);
+        filter: opacity(100%);
+      }
+    }
+  }
+
   // Header Styling
   .main-nav {
     .core-icon {
@@ -30,8 +51,13 @@
 
   .overview-section {
     h2 {
-      font-size: 180%;
+      font-size: 140%;
       margin-bottom: 1em;
+      font-weight: 400;
+    }
+
+    h2::after {
+      width: 130px;
     }
 
     .long-text {
@@ -69,6 +95,52 @@
     }
   }
 
+  //Buy now section
+  .buy-now-section {
+    align-items: center;
+    padding: 3em 3em;
+
+    h2 {
+      font-size: 125.5%;
+      margin-bottom: 1.5em;
+    }
+
+    .wrapper {
+      .left {
+        margin-bottom: 2em;
+        p {
+          width: 100%;
+          text-align: justify;
+        }
+      }
+
+      .right {
+        flex-direction: column;
+        align-items: center;
+
+        .slide-next {
+          width: 60%;
+          transition: all 0.3s;
+          margin: 2.5em;
+        }
+
+        .colors {
+          flex-direction: row;
+          width: 200px;
+
+          p {
+            display: none;
+          }
+
+          .btn {
+            margin-right: 0.5em;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
   //Get In Touch Styling
   .get-in-touch {
     h2 {
@@ -77,7 +149,6 @@
     }
 
     h2::after {
-      display: block;
       width: 220px;
     }
 

@@ -424,6 +424,7 @@ header .hero-text .hero-child-big {
 header .hero-text .hero-child {
   font-weight: 300;
   display: block;
+  border: 1px solid red;
 }
 header .beautiful-girl {
   position: absolute;
@@ -610,18 +611,14 @@ header .beautiful-girl {
 .buy-now-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #131313;
-  padding-left: 3.5em;
-  padding-top: 3em;
+  padding: 3em 3.5em;
 }
 .buy-now-section .left,
 .buy-now-section .right {
   display: flex;
   flex-direction: column;
-}
-.buy-now-section h2,
-.buy-now-section .wrapper {
-  margin-left: 1.5em;
 }
 .buy-now-section h2 {
   padding-top: 1em;
@@ -632,7 +629,7 @@ header .beautiful-girl {
 }
 .buy-now-section h2::after {
   display: block;
-  margin: 0.3em auto;
+  margin: 5px auto;
   width: 150px;
   content: " ";
   border: 1px solid #fff;
@@ -739,7 +736,7 @@ header .beautiful-girl {
 }
 .get-in-touch h2::after {
   display: block;
-  margin: 0.3em auto;
+  margin: 5px auto;
   width: 250px;
   content: " ";
   border: 1px solid #272626;
@@ -922,6 +919,23 @@ header .beautiful-girl {
     grid-template-areas: "left" "right";
   }
 
+  .header-section .hero-wrapper {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-section .hero-wrapper .hero-text {
+    display: none;
+  }
+  .header-section .hero-wrapper .beautiful-girl {
+    position: block;
+    right: 0;
+    height: 20px;
+    transform: translateY(0);
+    filter: opacity(100%);
+  }
+
   .main-nav .core-icon {
     height: 60px;
     margin-top: 1em;
@@ -932,8 +946,12 @@ header .beautiful-girl {
   }
 
   .overview-section h2 {
-    font-size: 180%;
+    font-size: 140%;
     margin-bottom: 1em;
+    font-weight: 400;
+  }
+  .overview-section h2::after {
+    width: 130px;
   }
   .overview-section .long-text {
     min-width: 80%;
@@ -964,12 +982,47 @@ header .beautiful-girl {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
+  .buy-now-section {
+    align-items: center;
+    padding: 3em 3em;
+  }
+  .buy-now-section h2 {
+    font-size: 125.5%;
+    margin-bottom: 1.5em;
+  }
+  .buy-now-section .wrapper .left {
+    margin-bottom: 2em;
+  }
+  .buy-now-section .wrapper .left p {
+    width: 100%;
+    text-align: justify;
+  }
+  .buy-now-section .wrapper .right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-now-section .wrapper .right .slide-next {
+    width: 60%;
+    transition: all 0.3s;
+    margin: 2.5em;
+  }
+  .buy-now-section .wrapper .right .colors {
+    flex-direction: row;
+    width: 200px;
+  }
+  .buy-now-section .wrapper .right .colors p {
+    display: none;
+  }
+  .buy-now-section .wrapper .right .colors .btn {
+    margin-right: 0.5em;
+    height: 40px;
+  }
+
   .get-in-touch h2 {
     font-size: 180%;
     margin-bottom: 1em;
   }
   .get-in-touch h2::after {
-    display: block;
     width: 220px;
   }
   .get-in-touch .left {
