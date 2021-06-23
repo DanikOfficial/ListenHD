@@ -293,7 +293,149 @@
 }
 
 /* Small phones to small tablets: from 481px to 767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 0 0 3em;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "left"
+      "right";
+  }
+
+  body {
+    font-size: 90%;
+  }
+
+  .overview-section {
+    .long-text {
+      width: 100%;
+      padding: 0 3em;
+    }
+
+    .box {
+      max-width: 100%;
+      padding: 2em 3em;
+    }
+
+    .microphone,
+    .wireless,
+    .ear {
+      height: 6em;
+    }
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+
+    .feature {
+      width: 100%;
+      padding: 3em;
+
+      div:first-of-type {
+        margin: 0;
+      }
+
+      .feature-desc {
+        width: 100%;
+      }
+
+      .feature-image {
+        width: 100%;
+      }
+    }
+  }
+
+  //Buy now section
+  .buy-now-section {
+    align-items: center;
+    padding: 3em 3em;
+
+    h2 {
+      font-size: 180%;
+    }
+
+    .wrapper {
+      .left {
+        margin-bottom: 2em;
+        p {
+          width: 100%;
+          text-align: start;
+          span {
+            font-size: 12px;
+          }
+        }
+
+        .buy-now {
+          text-align: center;
+        }
+      }
+
+      .right {
+        flex-direction: column;
+        align-items: center;
+
+        .slide-next {
+          width: 60%;
+          transition: all 0.3s;
+          margin: 2.5em;
+        }
+
+        .colors {
+          flex-direction: row;
+          width: 200px;
+
+          p {
+            display: none;
+          }
+
+          .btn {
+            margin-right: 0.5em;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  //Get In Touch Styling
+  .get-in-touch {
+    h2 {
+      font-size: 180%;
+      margin-bottom: 1em;
+    }
+
+    h2::after {
+      width: 220px;
+    }
+
+    .left {
+      margin-bottom: 3em;
+      .img {
+        max-width: 30%;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 2em;
+
+      .send-email {
+        text-align: center;
+      }
+    }
+  }
+
+  // Footer Sections
+  .footer-section {
+    .boxes {
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
