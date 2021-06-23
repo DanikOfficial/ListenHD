@@ -364,10 +364,6 @@ body {
   grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
 
-.row {
-  margin: 0 70px;
-}
-
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -503,7 +499,6 @@ header .beautiful-girl {
 }
 .overview-section .long-text {
   width: 60%;
-  text-align: justify;
   color: #000000;
   font-weight: 400;
   margin-bottom: 4em;
@@ -529,7 +524,8 @@ header .beautiful-girl {
   width: 100%;
 }
 .features-boxes .box {
-  width: 350px;
+  min-width: 320px;
+  max-width: 370px;
   display: flex;
   height: auto;
   flex-direction: column;
@@ -549,7 +545,7 @@ header .beautiful-girl {
   margin-bottom: 1em;
 }
 .features-boxes .box p {
-  text-align: justify;
+  text-align: start;
 }
 .features-boxes .box a {
   align-self: flex-start;
@@ -664,9 +660,11 @@ header .beautiful-girl {
 .buy-now-section .left .rates {
   height: 20px;
 }
-.buy-now-section .left .buy-now {
+.buy-now-section .left .buy-now:link,
+.buy-now-section .left .buy-now:visited {
   color: #e7e7e7;
   border: 2px solid #e7e7e7;
+  background-color: transparent;
   align-self: flex-start;
   padding: 4px 20px;
   border-radius: 0.3em;
@@ -674,7 +672,8 @@ header .beautiful-girl {
   margin-top: 1em;
   transition: all 0.3s;
 }
-.buy-now-section .left .buy-now:hover {
+.buy-now-section .left .buy-now:hover,
+.buy-now-section .left .buy-now:active {
   background-color: #f7f7f7;
   color: #090404;
 }
@@ -911,10 +910,10 @@ header .beautiful-girl {
   color: #e7e7e7;
 }
 
-/* Small phones: from 0 to 480px */
+/* Small phones: from 361px to 480px */
 @media (max-width: 480px) {
   body {
-    font-size: 16px;
+    font-size: 90%;
   }
 
   .wrapper {
@@ -925,19 +924,16 @@ header .beautiful-girl {
     grid-template-areas: "left" "right";
   }
 
-  .header-section,
-.overview-section,
-.features {
-    background-attachment: scroll;
+  .header-section {
+    padding-top: 1em;
   }
-
   .header-section .hero-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90%;
-    margin: 0 3em 2em;
+    margin: 0 2em 2em;
   }
   .header-section .hero-wrapper .hero-text {
     position: static;
@@ -946,14 +942,15 @@ header .beautiful-girl {
     order: 2;
   }
   .header-section .hero-wrapper .hero-text .hero-child-big {
-    font-size: 130%;
+    font-size: 90%;
   }
   .header-section .hero-wrapper .hero-text .hero-child {
-    font-weight: 400;
     display: block;
-    font-size: 70%;
+    font-weight: 400;
+    font-size: 50%;
   }
   .header-section .hero-wrapper .hero-text .hero-child .hero-child {
+    display: inline;
     font-size: 100%;
   }
   .header-section .hero-wrapper .beautiful-girl {
@@ -962,9 +959,6 @@ header .beautiful-girl {
     transform: translateY(0);
   }
 
-  .main-nav {
-    margin: 1em 1em 0;
-  }
   .main-nav .core-icon {
     height: 60px;
     margin: 0;
@@ -980,7 +974,6 @@ header .beautiful-girl {
   }
 
   .overview-section h2 {
-    font-size: 180%;
     margin-bottom: 1.5em;
     font-weight: 400;
   }
@@ -988,8 +981,9 @@ header .beautiful-girl {
     width: 130px;
   }
   .overview-section .long-text {
-    min-width: 80%;
-    margin-bottom: 2em;
+    width: 100%;
+    padding: 0 3em 3em;
+    margin: 0;
   }
 
   .features-boxes {
@@ -1006,7 +1000,6 @@ header .beautiful-girl {
   }
   .features-boxes .box p {
     width: 100%;
-    text-align: justify;
     line-height: 140%;
   }
   .features-boxes .box .microphone,
@@ -1026,9 +1019,14 @@ header .beautiful-girl {
     width: 100%;
     padding: 3em;
   }
-  .features .feature .feature-desc p {
+  .features .feature div:first-of-type {
+    margin: 0;
+  }
+  .features .feature .feature-desc {
     width: 100%;
-    text-align: justify;
+  }
+  .features .feature .feature-desc h2 {
+    font-size: 150%;
   }
   .features .feature .feature-image {
     width: 100%;
@@ -1040,14 +1038,20 @@ header .beautiful-girl {
   }
   .buy-now-section h2 {
     font-size: 180%;
-    margin-bottom: 1.5em;
   }
   .buy-now-section .wrapper .left {
     margin-bottom: 2em;
   }
   .buy-now-section .wrapper .left p {
     width: 100%;
-    text-align: justify;
+    text-align: start;
+  }
+  .buy-now-section .wrapper .left p span {
+    font-size: 12px;
+  }
+  .buy-now-section .wrapper .left .buy-now {
+    width: 100%;
+    text-align: center;
   }
   .buy-now-section .wrapper .right {
     flex-direction: column;
@@ -1095,6 +1099,7 @@ header .beautiful-girl {
   }
 
   .footer-section {
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }
@@ -1102,11 +1107,20 @@ header .beautiful-girl {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0 3em;
   }
   .footer-section .boxes div {
     margin-bottom: 2em;
     width: 100%;
-    padding: 0 3em;
+  }
+  .footer-section .boxes .site-map-box,
+.footer-section .boxes .social-networks-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-section .boxes .social-networks-box {
+    padding: 0;
   }
   .footer-section .boxes .site-map-box {
     border: 0;
@@ -1121,6 +1135,14 @@ header .beautiful-girl {
   .footer-section .boxes .site-map-box .site-links {
     margin-top: 1em;
     margin-left: 0;
+  }
+
+  h2 {
+    font-size: 150% !important;
+  }
+
+  h3 {
+    font-size: 100% !important;
   }
 }
 /* Small phones to small tablets: from 481px to 767px */

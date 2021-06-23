@@ -12,7 +12,6 @@
 
   .long-text {
     width: 60%;
-    text-align: justify;
     color: colors.$textColorDarker;
     font-weight: 400;
     margin-bottom: 4em;
@@ -42,7 +41,8 @@
   width: 100%;
 
   .box {
-    width: 350px;
+    min-width: 320px;
+    max-width: 370px;
     display: flex;
     height: auto;
     flex-direction: column;
@@ -65,8 +65,7 @@
     }
 
     p {
-      // text-align: start;
-      text-align: justify;
+      text-align: start;
     }
 
     a {

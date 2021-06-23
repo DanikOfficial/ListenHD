@@ -55,9 +55,11 @@
       height: 20px;
     }
 
-    .buy-now {
+    .buy-now:link,
+    .buy-now:visited {
       color: colors.$textColorWhite;
       border: 2px solid colors.$textColorWhite;
+      background-color: transparent;
       align-self: flex-start;
       padding: 4px 20px;
       border-radius: 0.3em;
@@ -66,7 +68,8 @@
       transition: all 0.3s;
     }
 
-    .buy-now:hover {
+    .buy-now:hover,
+    .buy-now:active {
       background-color: colors.$bg-color;
       color: colors.$textColor;
     }
