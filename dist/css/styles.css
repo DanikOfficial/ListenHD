@@ -662,9 +662,9 @@ header .beautiful-girl {
 }
 .buy-now-section .left .buy-now:link,
 .buy-now-section .left .buy-now:visited {
-  color: #e7e7e7;
-  border: 2px solid #e7e7e7;
-  background-color: transparent;
+  color: #090404;
+  border: 2px solid transparent;
+  background-color: #ffd200;
   align-self: flex-start;
   padding: 4px 20px;
   border-radius: 0.3em;
@@ -674,8 +674,9 @@ header .beautiful-girl {
 }
 .buy-now-section .left .buy-now:hover,
 .buy-now-section .left .buy-now:active {
-  background-color: #f7f7f7;
-  color: #090404;
+  background-color: #f3c702;
+  border: 2px solid #f3c702;
+  color: #fff;
 }
 .buy-now-section .right {
   display: flex;
@@ -991,7 +992,7 @@ header .beautiful-girl {
     margin-bottom: 2em;
   }
   .features-boxes .box {
-    width: 100%;
+    max-width: 100%;
     padding: 2em 3em;
   }
   .features-boxes .box h3 {

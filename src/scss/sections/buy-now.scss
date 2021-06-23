@@ -57,9 +57,9 @@
 
     .buy-now:link,
     .buy-now:visited {
-      color: colors.$textColorWhite;
-      border: 2px solid colors.$textColorWhite;
-      background-color: transparent;
+      color: colors.$linkColor;
+      border: 2px solid transparent;
+      background-color: colors.$yellow;
       align-self: flex-start;
       padding: 4px 20px;
       border-radius: 0.3em;
@@ -70,8 +70,9 @@
 
     .buy-now:hover,
     .buy-now:active {
-      background-color: colors.$bg-color;
-      color: colors.$textColor;
+      background-color: colors.$darkerYellow;
+      border: 2px solid colors.$darkerYellow;
+      color: colors.$hoverTextColor;
     }
   }
 
