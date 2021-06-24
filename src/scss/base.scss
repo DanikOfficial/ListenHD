@@ -19,6 +19,17 @@ body {
   box-sizing: border-box;
   font-weight: 300;
   scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 
 /* ----------------------------------------------- */
