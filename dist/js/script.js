@@ -1,21 +1,6 @@
 let currentImgName = "head-1";
 let menuOpened = false;
 
-const changeImage = (name) => {
-  if (currentImgName !== name) {
-    const buttons = Array.from(document.querySelectorAll(".btn"));
-    buttons.forEach((el) => el.classList.remove("selected"));
-
-    const imgLink = document.querySelector(".slide-next").src.split("/");
-    imgLink.pop();
-    imgLink.push(name + ".webp");
-
-    document.querySelector(".slide-next").src = imgLink.join("/");
-    document.querySelector("." + name).classList.add("selected");
-    currentImgName = name;
-  }
-};
-
 document.querySelector(".head-1").addEventListener("click", () => {
   changeImage("head-1");
 });
@@ -47,7 +32,7 @@ document
     const classList = Array.from(event.target.classList);
     const classNames = classList.join(" ");
 
-    if (classNames.includes("normal")) {
+    if (classNames.indexOf("normal") > -1) {
       hideOrShow();
     }
   });
@@ -61,4 +46,19 @@ function hideOrShow(prop = false) {
   document.body.style.overflow = prop ? "hidden" : "auto";
   menuOpened = prop;
   document.querySelector(".menu-container").classList.toggle("change");
+}
+
+function changeImage(name) {
+  if (currentImgName !== name) {
+    const button = document.querySelector(".selected");
+    button.classList.remove("selected");
+
+    const imgLink = document.querySelector(".slide-next").src.split("/");
+    imgLink.pop();
+    imgLink.push(name + ".webp");
+
+    document.querySelector(".slide-next").src = imgLink.join("/");
+    document.querySelector("." + name).classList.add("selected");
+    currentImgName = name;
+  }
 }
