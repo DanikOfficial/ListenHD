@@ -25,3 +25,7 @@ document.querySelector(".colors").addEventListener("click", (event) => {
     }
   }
 });
+
+document.querySelector(".menu-container").addEventListener("click", () => {
+  document.querySelector(".menu-container").classList.toggle("change");
+});
