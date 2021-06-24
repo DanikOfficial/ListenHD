@@ -1,4 +1,5 @@
 let currentImgName = "head-1";
+let modalOpened = false;
 
 document.querySelector(".colors").addEventListener("click", (event) => {
   const classList = Array.from(event.target.classList);
@@ -28,4 +29,14 @@ document.querySelector(".colors").addEventListener("click", (event) => {
 
 document.querySelector(".menu-container").addEventListener("click", () => {
   document.querySelector(".menu-container").classList.toggle("change");
+
+  if (modalOpened) {
+    document.querySelector(".float-nav").classList.toggle("show");
+    document.body.style.overflow = "auto";
+    modalOpened = false;
+  } else {
+    document.querySelector(".float-nav").classList.toggle("show");
+    document.body.style.overflow = "hidden";
+    modalOpened = true;
+  }
 });

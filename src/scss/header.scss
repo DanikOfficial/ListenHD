@@ -46,25 +46,31 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 1em 3em 0;
+  position: relative;
 
   .menu-container {
     display: none;
+    border: 2px solid #333;
+    padding: 0.2em 0.3em;
+    position: fixed;
+    right: 0.4em;
+    z-index: 3;
   }
 
   .bar1,
   .bar2,
   .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 31px;
+    height: 3px;
     background-color: #333;
-    margin: 6px 0;
+    margin: 4px 0;
     transition: 0.4s;
   }
 
   .change {
     .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-      transform: rotate(-45deg) translate(-9px, 6px);
+      -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+      transform: rotate(-45deg) translate(-4px, 6px);
     }
 
     .bar2 {
@@ -72,8 +78,8 @@ header {
     }
 
     .bar3 {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px);
-      transform: rotate(45deg) translate(-8px, -8px);
+      -webkit-transform: rotate(45deg) translate(-4px, -6px);
+      transform: rotate(45deg) translate(-4px, -6px);
     }
   }
 

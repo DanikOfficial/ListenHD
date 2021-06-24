@@ -442,30 +442,36 @@ header .beautiful-girl {
   justify-content: space-between;
   align-items: center;
   margin: 1em 3em 0;
+  position: relative;
   /* ------ Site Core Logo ------*/
 }
 .main-nav .menu-container {
   display: none;
+  border: 2px solid #333;
+  padding: 0.2em 0.3em;
+  position: fixed;
+  right: 0.4em;
+  z-index: 3;
 }
 .main-nav .bar1,
 .main-nav .bar2,
 .main-nav .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 31px;
+  height: 3px;
   background-color: #333;
-  margin: 6px 0;
+  margin: 4px 0;
   transition: 0.4s;
 }
 .main-nav .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+  transform: rotate(-45deg) translate(-4px, 6px);
 }
 .main-nav .change .bar2 {
   opacity: 0;
 }
 .main-nav .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-4px, -6px);
+  transform: rotate(45deg) translate(-4px, -6px);
 }
 .main-nav .home .core-icon {
   height: 100px;
@@ -816,6 +822,7 @@ header .beautiful-girl {
   font-weight: 400;
   cursor: pointer;
   margin-bottom: 2em;
+  border-radius: 0.3em;
   transition: all 0.3s;
 }
 .get-in-touch .right .send-email:hover {
@@ -929,6 +936,43 @@ header .beautiful-girl {
   color: #e7e7e7;
 }
 
+.float-nav {
+  position: fixed;
+  display: flex;
+  transform: translate(100%, 0);
+  background-color: #ffd200;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  border-left: 1px solid #e2b902;
+  transition: 0.5s;
+}
+.float-nav .navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2em;
+  padding-left: 2em;
+}
+.float-nav .navigation img {
+  height: 80px;
+  align-self: center;
+  margin-bottom: 1em;
+}
+.float-nav .navigation ul {
+  list-style: none;
+}
+.float-nav .navigation ul li {
+  margin-bottom: 1em;
+}
+
+.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 /* Small phones: from 361px to 480px */
 @media (max-width: 480px) {
   body {
@@ -977,7 +1021,7 @@ header .beautiful-girl {
   }
 
   .main-nav {
-    margin: 0 0.4em;
+    margin: 1em 0.9em;
   }
   .main-nav .menu-container {
     display: block;
@@ -1166,9 +1210,9 @@ header .beautiful-girl {
   }
 }
 /* Small phones to small tablets: from 481px to 767px */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .header-section .main-nav {
-    margin: 0 0.5em;
+    margin: 1em 0.9em;
   }
   .header-section .main-nav .menu-container {
     display: block;

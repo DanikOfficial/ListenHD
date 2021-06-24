@@ -1,0 +1,293 @@
+// General
+body {
+  font-size: 90%;
+}
+
+.wrapper {
+  margin: 0 0 3em;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left"
+    "right";
+}
+
+// Header Styling
+.header-section {
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin: 0 2em 2em;
+
+    .hero-text {
+      position: static;
+      transform: translate(0, 0);
+      letter-spacing: 3px;
+      order: 2;
+
+      .hero-child-big {
+        font-size: 90%;
+        font-weight: 400;
+      }
+
+      .hero-child {
+        display: block;
+        font-weight: 400;
+        font-size: 50%;
+        .hero-child {
+          display: inline;
+          font-size: 100%;
+        }
+      }
+    }
+
+    .beautiful-girl {
+      position: static;
+      height: 60%;
+      transform: translateY(0);
+    }
+  }
+}
+
+.main-nav {
+  margin: 1em 0.9em;
+
+  .menu-container {
+    display: block;
+    align-self: flex-start;
+  }
+
+  .home {
+    .core-icon {
+      height: 50px;
+    }
+  }
+
+  .main-nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+// Overview Section
+.overview-section {
+  h2 {
+    margin-bottom: 1.5em;
+    font-weight: 400;
+  }
+
+  h2::after {
+    width: 130px;
+  }
+
+  .long-text {
+    width: 100%;
+    padding: 0 3em 3em;
+    margin: 0;
+  }
+}
+
+.features-boxes {
+  flex-direction: column;
+  margin-bottom: 2em;
+
+  .box {
+    max-width: 100%;
+    padding: 2em 3em;
+
+    h3 {
+      font-size: 110%;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      width: 100%;
+      line-height: 140%;
+    }
+
+    .microphone,
+    .wireless,
+    .ear {
+      height: 5em;
+    }
+  }
+
+  .box:nth-child(even) {
+    background-color: rgba(0, 0.2, 0.1, 0.1);
+  }
+}
+
+// Features Section
+
+.features {
+  flex-direction: column;
+  align-items: center;
+
+  .feature {
+    width: 100%;
+    padding: 3em;
+
+    div:first-of-type {
+      margin: 0;
+    }
+
+    .feature-desc {
+      width: 100%;
+
+      h2 {
+        font-size: 150%;
+      }
+    }
+
+    .feature-image {
+      width: 100%;
+    }
+  }
+}
+
+//Buy now section
+.buy-now-section {
+  align-items: center;
+  padding: 3em 3em;
+
+  h2 {
+    font-size: 180%;
+  }
+
+  .wrapper {
+    .left {
+      margin-bottom: 2em;
+      p {
+        width: 100%;
+        text-align: start;
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .buy-now {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .right {
+      flex-direction: column;
+      align-items: center;
+
+      .slide-next {
+        width: 60%;
+        transition: all 0.3s;
+        margin: 2.5em;
+      }
+
+      .colors {
+        flex-direction: row;
+        width: 200px;
+
+        p {
+          display: none;
+        }
+
+        .btn {
+          margin-right: 0.5em;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+//Get In Touch Styling
+.get-in-touch {
+  h2 {
+    font-size: 180%;
+    margin-bottom: 1em;
+  }
+
+  h2::after {
+    width: 220px;
+  }
+
+  .left {
+    margin-bottom: 3em;
+    .img {
+      max-width: 30%;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2em;
+
+    .send-email {
+      width: 90%;
+      text-align: center;
+    }
+  }
+}
+
+// Footer Styling
+.footer-section {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  .boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3em;
+
+    div {
+      margin-bottom: 2em;
+      width: 100%;
+    }
+
+    .site-map-box,
+    .social-networks-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .social-networks-box {
+      padding: 0;
+    }
+
+    .site-map-box {
+      border: 0;
+
+      .map-icon {
+        margin-bottom: 0.5em;
+        align-self: center;
+      }
+
+      a {
+        align-self: flex-start;
+      }
+
+      .site-links {
+        margin-top: 1em;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 150% !important;
+}
+
+h3 {
+  font-size: 100% !important;
+}
