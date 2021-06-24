@@ -1,5 +1,5 @@
 let currentImgName = "head-1";
-let modalOpened = false;
+let menuOpened = false;
 
 document.querySelector(".colors").addEventListener("click", (event) => {
   const classList = Array.from(event.target.classList);
@@ -28,15 +28,32 @@ document.querySelector(".colors").addEventListener("click", (event) => {
 });
 
 document.querySelector(".menu-container").addEventListener("click", () => {
-  document.querySelector(".menu-container").classList.toggle("change");
-
-  if (modalOpened) {
-    document.querySelector(".float-nav").classList.toggle("show");
-    document.body.style.overflow = "auto";
-    modalOpened = false;
+  if (menuOpened) {
+    hideOrShow(true);
+    document.querySelector(".menu-container").classList.toggle("change");
   } else {
-    document.querySelector(".float-nav").classList.toggle("show");
-    document.body.style.overflow = "hidden";
-    modalOpened = true;
+    hideOrShow(false);
   }
 });
+
+document
+  .querySelector(".navigation .float-nav-links")
+  .addEventListener("click", (event) => {
+    const classList = Array.from(event.target.classList);
+    const classNames = classList.join(" ");
+
+    if (classNames.includes("normal")) {
+      hideOrShow();
+    }
+  });
+
+document
+  .querySelector(".float-core-icon")
+  .addEventListener("click", hideOrShow);
+
+function hideOrShow(prop = false) {
+  document.querySelector(".float-nav").classList.toggle("show");
+  document.body.style.overflow = prop ? "hidden" : "auto";
+  menuOpened = prop;
+  document.querySelector(".menu-container").classList.toggle("change");
+}
