@@ -404,6 +404,44 @@ a {
   grid-template-areas: "left right";
 }
 
+.float-nav {
+  position: fixed;
+  display: none;
+  transform: translate(100%, 0);
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  padding-top: 1em;
+  border-left: 1px solid #e2b902;
+  transition: 0.5s;
+  z-index: 3;
+}
+.float-nav .navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5em;
+  padding-left: 2em;
+}
+.float-nav .navigation img {
+  height: 80px;
+  align-self: center;
+  margin-bottom: 1em;
+}
+.float-nav .navigation ul {
+  list-style: none;
+}
+.float-nav .navigation ul li {
+  margin-bottom: 1em;
+}
+
+.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 /* ----------------------------------------------- */
 /* HEADER 
 /* ----------------------------------------------- */
@@ -446,6 +484,9 @@ header .beautiful-girl {
 .main-nav .home .core-icon {
   position: relative;
   z-index: 10;
+}
+.main-nav .home .sticky-icon {
+  display: none;
 }
 .main-nav .menu-container {
   display: none;
@@ -942,44 +983,6 @@ header .beautiful-girl {
   margin-top: auto;
   margin-bottom: 1em;
   color: #e7e7e7;
-}
-
-.float-nav {
-  position: fixed;
-  display: flex;
-  transform: translate(100%, 0);
-  background-color: white;
-  height: 100vh;
-  width: 100%;
-  opacity: 0;
-  padding-top: 1em;
-  border-left: 1px solid #e2b902;
-  transition: 0.5s;
-  z-index: 3;
-}
-.float-nav .navigation {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 5em;
-  padding-left: 2em;
-}
-.float-nav .navigation img {
-  height: 80px;
-  align-self: center;
-  margin-bottom: 1em;
-}
-.float-nav .navigation ul {
-  list-style: none;
-}
-.float-nav .navigation ul li {
-  margin-bottom: 1em;
-}
-
-.show {
-  transform: translate(0, 0);
-  opacity: 1;
 }
 
 /* Small phones: from 361px to 480px */

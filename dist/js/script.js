@@ -62,14 +62,20 @@ function changeImage(event) {
 
 function handleStickyNav() {
   const nav = document.querySelector(".main-nav");
+  const icon = document.querySelector(".home .core-icon");
+  const sticky = document.querySelector(".sticky-icon");
 
   if (window.scrollY < 420 && stickyOn === true) {
     nav.classList.remove("sticky-nav");
+    icon.style.display = "block";
+    sticky.style.display = "none";
     stickyOn = false;
   }
 
   if (window.scrollY > 427 && stickyOn === false) {
     nav.classList.add("sticky-nav");
+    icon.style.display = "none";
+    sticky.style.display = "block";
     stickyOn = true;
   }
 }

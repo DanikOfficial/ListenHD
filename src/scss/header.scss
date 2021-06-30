@@ -51,6 +51,10 @@ header {
       position: relative;
       z-index: 10;
     }
+
+    .sticky-icon {
+      display: none;
+    }
   }
 
   .menu-container {
