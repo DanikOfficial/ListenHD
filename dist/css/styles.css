@@ -948,38 +948,6 @@ header .beautiful-girl {
   color: #e7e7e7;
 }
 
-.float-nav {
-  position: fixed;
-  display: flex;
-  transform: translate(100%, 0);
-  background-color: #ffd200;
-  height: 100vh;
-  width: 100%;
-  z-index: 3;
-  opacity: 0;
-  border-left: 1px solid #e2b902;
-  transition: 0.5s;
-}
-.float-nav .navigation {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 2em;
-  padding-left: 2em;
-}
-.float-nav .navigation img {
-  height: 80px;
-  align-self: center;
-  margin-bottom: 1em;
-}
-.float-nav .navigation ul {
-  list-style: none;
-}
-.float-nav .navigation ul li {
-  margin-bottom: 1em;
-}
-
 .show {
   transform: translate(0, 0);
   opacity: 1;
@@ -1231,9 +1199,33 @@ header .beautiful-girl {
     font-size: 90%;
   }
 
-  .header-section .beautiful-girl,
-.header-section .hero-text {
-    display: none;
+  .header-section .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    margin: 1em 2em 0;
+  }
+  .header-section .hero-wrapper .hero-text {
+    position: static;
+    transform: translate(0, 0);
+    letter-spacing: 3px;
+    order: 2;
+  }
+  .header-section .hero-wrapper .hero-text .hero-child {
+    display: block;
+    font-weight: 400;
+    font-size: 100%;
+  }
+  .header-section .hero-wrapper .hero-text .hero-child .hero-child {
+    display: block;
+    font-size: 100%;
+  }
+  .header-section .hero-wrapper .beautiful-girl {
+    position: static;
+    height: 60%;
+    transform: translateY(0);
+    margin-bottom: 2em;
   }
   .header-section .responsive {
     display: none;

@@ -3,9 +3,36 @@ body {
 }
 
 .header-section {
-  .beautiful-girl,
-  .hero-text {
-    display: none;
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    margin: 1em 2em 0;
+
+    .hero-text {
+      position: static;
+      transform: translate(0, 0);
+      letter-spacing: 3px;
+      order: 2;
+
+      .hero-child {
+        display: block;
+        font-weight: 400;
+        font-size: 100%;
+        .hero-child {
+          display: block;
+          font-size: 100%;
+        }
+      }
+    }
+
+    .beautiful-girl {
+      position: static;
+      height: 60%;
+      transform: translateY(0);
+      margin-bottom: 2em;
+    }
   }
 
   .responsive {
