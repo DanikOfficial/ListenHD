@@ -952,6 +952,7 @@ header .beautiful-girl {
   height: 100vh;
   width: 100%;
   opacity: 0;
+  padding-top: 1em;
   border-left: 1px solid #e2b902;
   transition: 0.5s;
   z-index: 3;
@@ -961,7 +962,7 @@ header .beautiful-girl {
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 5em;
+  margin-top: 5em;
   padding-left: 2em;
 }
 .float-nav .navigation img {
@@ -1037,9 +1038,6 @@ header .beautiful-girl {
   }
   .main-nav .menu-container {
     display: block;
-  }
-  .main-nav .home .core-icon {
-    height: 50px;
   }
   .main-nav .main-nav-links {
     display: none;
@@ -1257,9 +1255,6 @@ header .beautiful-girl {
   }
   .header-section .main-nav .menu-container {
     display: block;
-  }
-  .header-section .main-nav .home .core-icon {
-    height: 50px;
   }
   .header-section .main-nav .main-nav-links {
     display: none;
