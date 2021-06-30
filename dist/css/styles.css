@@ -417,7 +417,7 @@ header {
 }
 header .hero-text {
   position: absolute;
-  transform: translate(2em, 60%);
+  transform: translate(2em, 5em);
   letter-spacing: 3px;
 }
 header .hero-text .hero-child-big {
@@ -430,8 +430,7 @@ header .hero-text .hero-child {
 header .beautiful-girl {
   position: absolute;
   right: 35px;
-  height: 350px;
-  transform: translateY(10%);
+  transform: translateY(6em);
   filter: opacity(90%);
 }
 
@@ -565,12 +564,13 @@ header .beautiful-girl {
   height: auto;
   flex-direction: column;
 }
+.features-boxes .box picture {
+  align-self: center;
+}
 .features-boxes .box .microphone,
 .features-boxes .box .wireless,
 .features-boxes .box .ear {
-  align-self: center;
   margin-bottom: 1.5em;
-  height: 134px;
 }
 .features-boxes .box h3 {
   font-size: 19px;
@@ -606,7 +606,6 @@ header .beautiful-girl {
   transition: all 0.3s;
 }
 .feature .feature-image:hover > img {
-  width: 95%;
   border-radius: 5px;
 }
 .feature .feature-desc {
@@ -788,9 +787,6 @@ header .beautiful-girl {
   align-items: center;
   justify-content: center;
 }
-.get-in-touch .left .img {
-  width: 50%;
-}
 .get-in-touch .right {
   color: #272626;
 }
@@ -967,12 +963,14 @@ header .beautiful-girl {
     grid-template-areas: "left" "right";
   }
 
+  .header-section {
+    height: auto;
+  }
   .header-section .hero-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90%;
     margin: 0 2em 2em;
   }
   .header-section .hero-wrapper .hero-text {
@@ -996,7 +994,6 @@ header .beautiful-girl {
   }
   .header-section .hero-wrapper .beautiful-girl {
     position: static;
-    height: 60%;
     transform: translateY(0);
   }
 
@@ -1051,11 +1048,6 @@ header .beautiful-girl {
   .features-boxes .box p {
     width: 100%;
     line-height: 140%;
-  }
-  .features-boxes .box .microphone,
-.features-boxes .box .wireless,
-.features-boxes .box .ear {
-    height: 5em;
   }
 
   .features {
@@ -1132,9 +1124,6 @@ header .beautiful-girl {
   .get-in-touch .left {
     margin-bottom: 3em;
   }
-  .get-in-touch .left .img {
-    max-width: 30%;
-  }
   .get-in-touch .right {
     display: flex;
     flex-direction: column;
@@ -1199,16 +1188,18 @@ header .beautiful-girl {
     font-size: 90%;
   }
 
+  .header-section {
+    height: auto;
+  }
   .header-section .hero-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90%;
-    margin: 1em 2em 0;
+    margin: 2em 2em;
   }
   .header-section .hero-wrapper .hero-text {
-    position: static;
     transform: translate(0, 0);
+    position: static;
     letter-spacing: 3px;
     order: 2;
   }
@@ -1223,9 +1214,8 @@ header .beautiful-girl {
   }
   .header-section .hero-wrapper .beautiful-girl {
     position: static;
-    height: 60%;
     transform: translateY(0);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   .header-section .responsive {
     display: none;
@@ -1258,11 +1248,6 @@ header .beautiful-girl {
   .overview-section .box {
     max-width: 100%;
     padding: 2em 0;
-  }
-  .overview-section .microphone,
-.overview-section .wireless,
-.overview-section .ear {
-    height: 6em;
   }
 
   .features {
@@ -1335,9 +1320,6 @@ header .beautiful-girl {
   .get-in-touch .left {
     margin-bottom: 3em;
   }
-  .get-in-touch .left .img {
-    max-width: 30%;
-  }
   .get-in-touch .right {
     display: flex;
     flex-direction: column;
@@ -1362,9 +1344,6 @@ header .beautiful-girl {
 
   .header-section .hero-text {
     transform: translate(1em, 150%);
-  }
-  .header-section .beautiful-girl {
-    height: 500px;
   }
 
   .overview-section .long-text {

@@ -3,16 +3,17 @@ body {
 }
 
 .header-section {
+  height: auto;
+
   .hero-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90%;
-    margin: 1em 2em 0;
+    margin: 2em 2em;
 
     .hero-text {
-      position: static;
       transform: translate(0, 0);
+      position: static;
       letter-spacing: 3px;
       order: 2;
 
@@ -29,9 +30,8 @@ body {
 
     .beautiful-girl {
       position: static;
-      height: 60%;
       transform: translateY(0);
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
   }
 
@@ -76,12 +76,6 @@ body {
   .box {
     max-width: 100%;
     padding: 2em 0;
-  }
-
-  .microphone,
-  .wireless,
-  .ear {
-    height: 6em;
   }
 }
 
@@ -173,9 +167,6 @@ body {
 
   .left {
     margin-bottom: 3em;
-    .img {
-      max-width: 30%;
-    }
   }
 
   .right {

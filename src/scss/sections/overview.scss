@@ -45,12 +45,14 @@
     height: auto;
     flex-direction: column;
 
+    picture {
+      align-self: center;
+    }
+
     .microphone,
     .wireless,
     .ear {
-      align-self: center;
       margin-bottom: 1.5em;
-      height: 134px;
     }
 
     h3 {

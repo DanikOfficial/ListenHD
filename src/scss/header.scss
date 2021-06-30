@@ -16,7 +16,7 @@ header {
 
   .hero-text {
     position: absolute;
-    transform: translate(2em, 60%);
+    transform: translate(2em, 5em);
     letter-spacing: 3px;
 
     .hero-child-big {
@@ -32,8 +32,7 @@ header {
   .beautiful-girl {
     position: absolute;
     right: 35px;
-    height: 350px;
-    transform: translateY(10%);
+    transform: translateY(6em);
     filter: opacity(90%);
   }
 }

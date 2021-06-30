@@ -15,12 +15,12 @@ body {
 
 // Header Styling
 .header-section {
+  height: auto;
   .hero-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90%;
     margin: 0 2em 2em;
 
     .hero-text {
@@ -47,7 +47,6 @@ body {
 
     .beautiful-girl {
       position: static;
-      height: 60%;
       transform: translateY(0);
     }
   }
@@ -117,12 +116,6 @@ body {
     p {
       width: 100%;
       line-height: 140%;
-    }
-
-    .microphone,
-    .wireless,
-    .ear {
-      height: 5em;
     }
   }
 }
@@ -222,9 +215,6 @@ body {
 
   .left {
     margin-bottom: 3em;
-    .img {
-      max-width: 30%;
-    }
   }
 
   .right {
