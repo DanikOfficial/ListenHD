@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="This is a website about a fiticional Company who manufactures Headphones..."
+      content="This is a website about a fiticional Company that manufactures Headphones..."
     />
     <meta name="author" content="Pete João Chiboleca" />
     <meta
@@ -25,13 +25,18 @@
   </head>
   <body>
     <header class="header-section">
-      <!-- Responsive Nav -->
-      <div class="float-nav">
-        <div class="navigation">
-          <a class="float-home" href="#"
-            ><img class="float-core-icon" src="images/logo.webp" alt="logo"
-          /></a>
-          <ul class="float-nav-links">
+      <!-- Main Nav -->
+      <nav class="main-nav">
+        <a class="home" href="#"
+          ><img class="core-icon" src="images/logo.webp" alt="logo"
+        /></a>
+        <div class="menu-container">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="responsive">
+          <ul class="main-nav-links">
             <li><a class="normal-link" href="#">Home</a></li>
             <li>
               <a class="normal-link" href="#overview-section">Overview</a>
@@ -47,27 +52,6 @@
             </li>
           </ul>
         </div>
-      </div>
-
-      <!-- Main Nav -->
-      <nav class="main-nav">
-        <a class="home" href="#"
-          ><img class="core-icon" src="images/logo.webp" alt="logo"
-        /></a>
-        <div class="menu-container">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <ul class="main-nav-links">
-          <li><a class="normal-link" href="#">Home</a></li>
-          <li><a class="normal-link" href="#overview-section">Overview</a></li>
-          <li><a class="normal-link" href="#features-section">Features</a></li>
-          <li><a class="normal-link" href="#get-in-touch">Get In Touch</a></li>
-          <li>
-            <a class="special-link" href="#buy-now-section">Order Now</a>
-          </li>
-        </ul>
       </nav>
 
       <div class="hero-wrapper">
@@ -192,7 +176,7 @@
               The smarter way to enjoy industry-leading noise canceling and
               premium sound.
             </p>
-            <h4>XR500 S1MX1H</h4>
+            <h3>XR500 S1MX1H</h3>
             <p>
               <img class="rates" src="images/rates.webp" alt="" />
               <span>(1855+) customer reviews...</span>
@@ -203,7 +187,7 @@
               Speak-to-Chat mode.
             </p>
 
-            <h4>$279.99</h4>
+            <h3>$279.99</h3>
             <a href="#get-in-touch" class="buy-now">Order Now!</a>
           </div>
           <div class="right">
@@ -232,7 +216,7 @@
             </p>
             <textarea placeholder="Your message..." class="message"></textarea>
             <input placeholder="Your Email..." type="text" class="email" />
-            <a class="send-email">Submit</a>
+            <a href="#get-in-touch" class="send-email">Submit</a>
           </div>
         </div>
       </section>
@@ -255,25 +239,25 @@
           <h4>Our Social Networks</h4>
           <ul class="social-links">
             <li>
-              <a class="facebook"
+              <a href="#" class="facebook"
                 ><ion-icon class="icon" name="logo-facebook"></ion-icon
                 ><span>Facebook</span>
               </a>
             </li>
             <li>
-              <a class="twitter"
+              <a href="#" class="twitter"
                 ><ion-icon class="icon" name="logo-twitter"></ion-icon
                 ><span>Twitter</span></a
               >
             </li>
             <li>
-              <a class="instagram"
+              <a href="#" class="instagram"
                 ><ion-icon class="icon" name="logo-instagram"></ion-icon
                 ><span>Instagram</span></a
               >
             </li>
             <li>
-              <a class="linkedin"
+              <a href="#" class="linkedin"
                 ><ion-icon class="icon" name="logo-linkedin"></ion-icon
                 ><span>Linkedin</span>
               </a>
@@ -281,7 +265,9 @@
           </ul>
         </div>
       </div>
-      <p class="author-rights">Pete João Chiboleca &copy; All rights reserved.</p>
+      <p class="author-rights">
+        Pete João Chiboleca &copy; All rights reserved.
+      </p>
     </footer>
     <script
       type="module"

@@ -1,5 +1,6 @@
 let currentImgName = "head-1";
 let menuOpened = false;
+let stickyOn = false;
 
 document.querySelector(".head-1").addEventListener("click", () => {
   changeImage("head-1");
@@ -26,21 +27,6 @@ document.querySelector(".menu-container").addEventListener("click", () => {
   }
 });
 
-document
-  .querySelector(".navigation .float-nav-links")
-  .addEventListener("click", (event) => {
-    const classList = Array.from(event.target.classList);
-    const classNames = classList.join(" ");
-
-    if (classNames.indexOf("normal") > -1) {
-      hideOrShow();
-    }
-  });
-
-document
-  .querySelector(".float-core-icon")
-  .addEventListener("click", hideOrShow);
-
 function hideOrShow(prop = false) {
   document.querySelector(".float-nav").classList.toggle("show");
   document.body.style.overflow = prop ? "hidden" : "auto";
@@ -62,3 +48,19 @@ function changeImage(name) {
     currentImgName = name;
   }
 }
+
+document.addEventListener("scroll", () => {
+  const nav = document.querySelector(".main-nav");
+
+  console.log(window.scrollY);
+
+  if (window.scrollY < 420 && stickyOn === true) {
+    nav.classList.remove("sticky-nav");
+    stickyOn = false;
+  }
+
+  if (window.scrollY > 427 && stickyOn === false) {
+    nav.classList.add("sticky-nav");
+    stickyOn = true;
+  }
+});

@@ -421,7 +421,7 @@ header .hero-text {
   letter-spacing: 3px;
 }
 header .hero-text .hero-child-big {
-  font-size: 220%;
+  font-size: 200%;
 }
 header .hero-text .hero-child {
   font-weight: 300;
@@ -430,7 +430,7 @@ header .hero-text .hero-child {
 header .beautiful-girl {
   position: absolute;
   right: 35px;
-  height: 450px;
+  height: 350px;
   transform: translateY(10%);
   filter: opacity(90%);
 }
@@ -441,15 +441,13 @@ header .beautiful-girl {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 1em 3em 0;
-  position: relative;
+  padding: 1em 3em 0;
   /* ------ Site Core Logo ------*/
 }
 .main-nav .menu-container {
   display: none;
   border: 2px solid #333;
   padding: 0.2em 0.3em;
-  position: fixed;
   right: 0.4em;
   z-index: 3;
 }
@@ -474,7 +472,22 @@ header .beautiful-girl {
   transform: rotate(45deg) translate(-4px, -6px);
 }
 .main-nav .home .core-icon {
-  height: 100px;
+  height: 80px;
+}
+
+.sticky-nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0.4em 3em 0;
+  width: 100%;
+  z-index: 5;
+  transition: 0.5s;
+  box-shadow: 0 5px #f0f0f0;
+}
+.sticky-nav .home .core-icon {
+  height: 50px;
 }
 
 .main-nav-links {
@@ -482,7 +495,7 @@ header .beautiful-girl {
 }
 .main-nav-links li {
   display: inline-block;
-  margin-left: 0.8em;
+  margin-left: 0.3em;
 }
 .main-nav-links li .normal-link:link,
 .main-nav-links li .normal-link:visited {
@@ -542,12 +555,13 @@ header .beautiful-girl {
 .features-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 1em;
+  margin: 0 3em;
   width: 100%;
 }
 .features-boxes .box {
+  padding: 1em;
   min-width: 320px;
   max-width: 370px;
   display: flex;
@@ -581,10 +595,7 @@ header .beautiful-girl {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 4em 0;
-}
-.feature div:first-of-type {
-  margin-right: 4em;
+  padding: 4em 2em;
 }
 .feature .feature-image {
   width: 650px;
@@ -599,7 +610,8 @@ header .beautiful-girl {
   border-radius: 5px;
 }
 .feature .feature-desc {
-  width: 450px;
+  width: 430px;
+  padding: 0 2em;
 }
 .feature .feature-desc h2,
 .feature .feature-desc p {
@@ -664,7 +676,7 @@ header .beautiful-girl {
   margin-top: 2.5em;
 }
 .buy-now-section .left p,
-.buy-now-section .left h4 {
+.buy-now-section .left h3 {
   color: #e7e7e7;
   margin-bottom: 1.5em;
 }
@@ -678,8 +690,8 @@ header .beautiful-girl {
   width: 90%;
   line-height: 1.3em;
 }
-.buy-now-section .left h4 {
-  font-weight: 500;
+.buy-now-section .left h3 {
+  font-weight: 400;
 }
 .buy-now-section .left .rates {
   height: 20px;
@@ -1021,11 +1033,13 @@ header .beautiful-girl {
   }
 
   .main-nav {
-    margin: 1em 0.9em;
+    padding: 0.4em 1em 0;
+  }
+  .main-nav .responsive {
+    display: none;
   }
   .main-nav .menu-container {
     display: block;
-    align-self: flex-start;
   }
   .main-nav .home .core-icon {
     height: 50px;
@@ -1035,6 +1049,10 @@ header .beautiful-girl {
   }
   .main-nav .menu-icon {
     display: block;
+  }
+
+  .sticky-nav {
+    padding: 0.4em 1em 0;
   }
 
   .overview-section h2 {
@@ -1088,6 +1106,7 @@ header .beautiful-girl {
   }
   .features .feature .feature-desc {
     width: 100%;
+    padding: 0;
   }
   .features .feature .feature-desc h2 {
     font-size: 150%;
@@ -1211,12 +1230,14 @@ header .beautiful-girl {
 }
 /* Small phones to small tablets: from 481px to 767px */
 @media (min-width: 481px) and (max-width: 768px) {
+  .header-section .responsive {
+    display: none;
+  }
   .header-section .main-nav {
-    margin: 1em 0.9em;
+    padding: 1em 1em 0;
   }
   .header-section .main-nav .menu-container {
     display: block;
-    align-self: flex-start;
   }
   .header-section .main-nav .home .core-icon {
     height: 50px;
@@ -1264,6 +1285,7 @@ header .beautiful-girl {
   }
   .features .feature .feature-desc {
     width: 100%;
+    padding: 0 0 1em;
   }
   .features .feature .feature-image {
     width: 100%;

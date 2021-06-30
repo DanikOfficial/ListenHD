@@ -34,13 +34,14 @@
 .features-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 1em;
+  margin: 0 3em;
   //border: 1px solid red;
   width: 100%;
 
   .box {
+    padding: 1em;
     min-width: 320px;
     max-width: 370px;
     display: flex;
