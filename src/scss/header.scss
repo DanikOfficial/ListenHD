@@ -81,12 +81,6 @@ header {
   }
 
   /* ------ Site Core Logo ------*/
-
-  .home {
-    .core-icon {
-      height: 80px;
-    }
-  }
 }
 
 .sticky-nav {
@@ -99,12 +93,6 @@ header {
   z-index: 5;
   transition: 0.5s;
   box-shadow: 0 5px rgb(233, 233, 233);
-
-  .home {
-    .core-icon {
-      height: 50px;
-    }
-  }
 }
 
 .main-nav-links {

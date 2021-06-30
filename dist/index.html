@@ -27,9 +27,20 @@
     <header class="header-section">
       <!-- Main Nav -->
       <nav class="main-nav">
-        <a class="home" href="#"
-          ><img class="core-icon" src="images/logo.webp" alt="logo"
-        /></a>
+        <a class="home" href="#">
+          <picture>
+            <source
+              srcset="images/larger/logo.webp"
+              media="(min-width: 1025px)"
+            />
+            <source
+              srcset="images/small/logo.webp"
+              media="(min-width: 401px) and (max-width:768px)"
+            />
+
+            <img class="core-icon" src="images/smaller/logo.webp" alt="Logo" />
+          </picture>
+        </a>
         <div class="menu-container">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -290,7 +301,73 @@
             <a href="#get-in-touch" class="buy-now">Order Now!</a>
           </div>
           <div class="right">
-            <img src="images/head-1.webp" alt="" class="slide-next" />
+            <picture>
+              <source
+                srcset="images/larger/head-1.webp"
+                media="(min-width: 1025px)"
+              />
+              <source
+                srcset="images/small/head-1.webp"
+                media="(min-width: 401px) and (max-width:768px)"
+              />
+
+              <img
+                class="slide-next show head-1"
+                src="images/smaller/head-1.webp"
+                alt="Headphone"
+              />
+            </picture>
+
+            <picture>
+              <source
+                srcset="images/larger/head-2.webp"
+                media="(min-width: 1025px)"
+              />
+              <source
+                srcset="images/small/head-2.webp"
+                media="(min-width: 401px) and (max-width:768px)"
+              />
+
+              <img
+                class="slide-next head-2 hide"
+                src="images/smaller/head-2.webp"
+                alt="Headphone"
+              />
+            </picture>
+
+            <picture>
+              <source
+                srcset="images/larger/head-3.webp"
+                media="(min-width: 1025px)"
+              />
+              <source
+                srcset="images/small/head-3.webp"
+                media="(min-width: 401px) and (max-width:768px)"
+              />
+
+              <img
+                class="slide-next head-3 hide"
+                src="images/smaller/head-3.webp"
+                alt="Headphone"
+              />
+            </picture>
+
+            <picture>
+              <source
+                srcset="images/larger/head-4.webp"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="images/small/head-4.webp"
+                media="(min-width: 401px) and (max-width:768px)"
+              />
+
+              <img
+                class="slide-next head-4 hide"
+                src="images/smaller/head-4.webp"
+                alt="Headphone"
+              />
+            </picture>
             <div class="colors">
               <p><em>Pick a color!</em></p>
               <button class="btn btn-black selected head-1" />

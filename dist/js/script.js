@@ -2,21 +2,9 @@ let currentImgName = "head-1";
 let menuOpened = false;
 let stickyOn = false;
 
-document.querySelector(".head-1").addEventListener("click", () => {
-  changeImage("head-1");
-});
+document.querySelector(".colors").addEventListener("click", changeImage);
 
-document.querySelector(".head-2").addEventListener("click", () => {
-  changeImage("head-2");
-});
-
-document.querySelector(".head-3").addEventListener("click", () => {
-  changeImage("head-3");
-});
-
-document.querySelector(".head-4").addEventListener("click", () => {
-  changeImage("head-4");
-});
+document.addEventListener("scroll", handleStickyNav);
 
 document.querySelector(".menu-container").addEventListener("click", () => {
   if (menuOpened) {
@@ -28,28 +16,29 @@ document.querySelector(".menu-container").addEventListener("click", () => {
 });
 
 function hideOrShow(prop = false) {
-  document.querySelector(".float-nav").classList.toggle("show");
-  document.body.style.overflow = prop ? "hidden" : "auto";
-  menuOpened = prop;
   document.querySelector(".menu-container").classList.toggle("change");
 }
 
-function changeImage(name) {
-  if (currentImgName !== name) {
-    const button = document.querySelector(".selected");
-    button.classList.remove("selected");
+function changeImage(event) {
+  const name = Array.from(event.target.classList);
+  const classList = name.join(" ");
 
-    const imgLink = document.querySelector(".slide-next").src.split("/");
-    imgLink.pop();
-    imgLink.push(name + ".webp");
+  if (classList.indexOf("head") > -1) {
+    const imgName = name[name.length - 1];
 
-    document.querySelector(".slide-next").src = imgLink.join("/");
-    document.querySelector("." + name).classList.add("selected");
-    currentImgName = name;
+    if (currentImgName !== imgName) {
+      document.querySelector(`.${currentImgName}`).classList.remove("show");
+      document.querySelector(`.${currentImgName}`).classList.add("hide");
+      document.querySelector(`.${imgName}`).classList.add("show");
+      document.querySelector(".selected").classList.remove("selected");
+      document.querySelector(".colors ." + imgName).classList.add("selected");
+
+      currentImgName = imgName;
+    }
   }
 }
 
-document.addEventListener("scroll", () => {
+function handleStickyNav() {
   const nav = document.querySelector(".main-nav");
 
   if (window.scrollY < 420 && stickyOn === true) {
@@ -61,4 +50,4 @@ document.addEventListener("scroll", () => {
     nav.classList.add("sticky-nav");
     stickyOn = true;
   }
-});
+}

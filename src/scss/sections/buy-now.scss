@@ -39,7 +39,7 @@
       color: colors.$reviews-colors;
       position: relative;
       bottom: 10px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     p {
@@ -81,9 +81,12 @@
     flex-direction: row;
     justify-content: center;
 
-    .slide-next {
-      width: 50%;
-      transition: all 0.3s;
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: block;
       margin-right: 2.5em;
     }
 

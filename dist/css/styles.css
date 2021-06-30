@@ -348,7 +348,7 @@ template {
 
 html,
 body {
-  font-size: 18px;
+  font-size: 17px;
   color: #090404;
   text-rendering: optimizeLegibility;
   font-family: "Neusa Next Pro", "Arial", sans-serif;
@@ -680,10 +680,10 @@ header .beautiful-girl {
   margin-bottom: 1.5em;
 }
 .buy-now-section .left p span {
-  color: #6b6b67;
+  color: #e9e9e9;
   position: relative;
   bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .buy-now-section .left p {
   width: 90%;
@@ -718,9 +718,11 @@ header .beautiful-girl {
   flex-direction: row;
   justify-content: center;
 }
-.buy-now-section .right .slide-next {
-  width: 50%;
-  transition: all 0.3s;
+.buy-now-section .right .hide {
+  display: none;
+}
+.buy-now-section .right .show {
+  display: block;
   margin-right: 2.5em;
 }
 .buy-now-section .right .colors {
