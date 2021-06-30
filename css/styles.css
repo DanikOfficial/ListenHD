@@ -406,7 +406,6 @@ a {
 
 .float-nav {
   position: fixed;
-  display: none;
   transform: translate(100%, 0);
   background-color: white;
   height: 100vh;
