@@ -4,11 +4,11 @@ let stickyOn = false;
 
 document.querySelector(".colors").addEventListener("click", changeImage);
 
-document.addEventListener("scroll", () => {});
+document.querySelector(".core-icon").addEventListener("click", hideNavigation);
+
+document.addEventListener("scroll", handleStickyNav);
 
 document.querySelector(".menu-container").addEventListener("click", () => {
-  console.log(menuOpened);
-
   if (menuOpened) {
     hideNavigation();
   } else {
