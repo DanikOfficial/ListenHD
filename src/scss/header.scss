@@ -16,7 +16,7 @@ header {
 
   .hero-text {
     position: absolute;
-    transform: translate(15%, 60%);
+    transform: translate(2em, 60%);
     letter-spacing: 3px;
 
     .hero-child-big {
@@ -99,7 +99,7 @@ header {
   width: 100%;
   z-index: 5;
   transition: 0.5s;
-  box-shadow: 0 5px rgb(240, 240, 240);
+  box-shadow: 0 5px rgb(233, 233, 233);
 
   .home {
     .core-icon {

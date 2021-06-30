@@ -417,7 +417,7 @@ header {
 }
 header .hero-text {
   position: absolute;
-  transform: translate(15%, 60%);
+  transform: translate(2em, 60%);
   letter-spacing: 3px;
 }
 header .hero-text .hero-child-big {
@@ -484,7 +484,7 @@ header .beautiful-girl {
   width: 100%;
   z-index: 5;
   transition: 0.5s;
-  box-shadow: 0 5px #f0f0f0;
+  box-shadow: 0 5px #e9e9e9;
 }
 .sticky-nav .home .core-icon {
   height: 50px;
@@ -535,7 +535,7 @@ header .beautiful-girl {
   margin-bottom: 0.5em;
 }
 .overview-section .long-text {
-  width: 60%;
+  width: 70%;
   color: #000000;
   font-weight: 400;
   margin-bottom: 4em;
@@ -555,15 +555,12 @@ header .beautiful-girl {
 .features-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   margin: 0 3em;
-  width: 100%;
 }
 .features-boxes .box {
   padding: 1em;
-  min-width: 320px;
-  max-width: 370px;
+  max-width: 33%;
   display: flex;
   height: auto;
   flex-direction: column;
@@ -592,13 +589,16 @@ header .beautiful-girl {
 .feature {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 4em 2em;
+  padding: 4em 3em;
+}
+.feature div:first-of-type {
+  margin-right: 3em;
+  margin-left: 1em;
 }
 .feature .feature-image {
-  width: 650px;
+  width: 50%;
 }
 .feature .feature-image img {
   width: 100%;
@@ -610,8 +610,8 @@ header .beautiful-girl {
   border-radius: 5px;
 }
 .feature .feature-desc {
-  width: 430px;
-  padding: 0 2em;
+  width: 42%;
+  padding: 0;
 }
 .feature .feature-desc h2,
 .feature .feature-desc p {
@@ -1074,7 +1074,7 @@ header .beautiful-girl {
   }
   .features-boxes .box {
     max-width: 100%;
-    padding: 2em 3em;
+    padding: 2em 0;
   }
   .features-boxes .box h3 {
     font-size: 110%;
@@ -1088,9 +1088,6 @@ header .beautiful-girl {
 .features-boxes .box .wireless,
 .features-boxes .box .ear {
     height: 5em;
-  }
-  .features-boxes .box:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .features {
@@ -1230,6 +1227,14 @@ header .beautiful-girl {
 }
 /* Small phones to small tablets: from 481px to 767px */
 @media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
+  .header-section .beautiful-girl,
+.header-section .hero-text {
+    display: none;
+  }
   .header-section .responsive {
     display: none;
   }
@@ -1254,17 +1259,13 @@ header .beautiful-girl {
     grid-template-areas: "left" "right";
   }
 
-  body {
-    font-size: 90%;
-  }
-
   .overview-section .long-text {
     width: 100%;
     padding: 0 3em;
   }
   .overview-section .box {
     max-width: 100%;
-    padding: 2em 3em;
+    padding: 2em 0;
   }
   .overview-section .microphone,
 .overview-section .wireless,
@@ -1362,6 +1363,61 @@ header .beautiful-girl {
   }
 }
 /* Small tablet to big tablet: from 768px to 1023px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 80%;
+  }
+
+  .header-section .hero-text {
+    transform: translate(1em, 150%);
+  }
+  .header-section .beautiful-girl {
+    height: 500px;
+  }
+
+  .overview-section .long-text {
+    width: 90%;
+    padding: 0 2em;
+  }
+  .overview-section .features-boxes {
+    justify-content: flex-start;
+    padding: 0 3em;
+    width: 100%;
+  }
+  .overview-section .features-boxes .box {
+    max-width: 50%;
+  }
+  .overview-section .microphone,
+.overview-section .wireless,
+.overview-section .ear {
+    height: 6em;
+  }
+
+  .features {
+    padding: 4em 3em;
+  }
+  .features .feature {
+    padding: 3em 0;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .features .feature .feature-desc {
+    padding-right: 0;
+  }
+  .features .feature .feature-desc:nth-child(odd) {
+    padding-left: 0;
+  }
+  .features .feature .feature-desc:nth-child(odd) p,
+.features .feature .feature-desc:nth-child(odd) h2 {
+    max-width: 90%;
+  }
+  .features .feature:last-of-type {
+    padding-bottom: 0;
+  }
+  .features .feature:first-of-type {
+    padding-top: 0;
+  }
+}
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 
 /*# sourceMappingURL=styles.css.map */

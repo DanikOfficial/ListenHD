@@ -1,13 +1,17 @@
 .feature {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 4em 2em;
+  padding: 4em 3em;
+
+  div:first-of-type {
+    margin-right: 3em;
+    margin-left: 1em;
+  }
 
   .feature-image {
-    width: 650px;
+    width: 50%;
   }
 
   .feature-image img {
@@ -22,8 +26,8 @@
   }
 
   .feature-desc {
-    width: 430px;
-    padding: 0 2em;
+    width: 42%;
+    padding: 0;
 
     h2,
     p {

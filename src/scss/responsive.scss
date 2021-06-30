@@ -52,9 +52,10 @@
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
-@media (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  @import "./responsivity/large.scss";
 }
 
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
-@media (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
 }

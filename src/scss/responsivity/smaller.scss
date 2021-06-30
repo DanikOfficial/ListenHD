@@ -107,7 +107,7 @@ body {
 
   .box {
     max-width: 100%;
-    padding: 2em 3em;
+    padding: 2em 0;
 
     h3 {
       font-size: 110%;
@@ -124,10 +124,6 @@ body {
     .ear {
       height: 5em;
     }
-  }
-
-  .box:nth-child(even) {
-    background-color: rgba(0, 0.2, 0.1, 0.1);
   }
 }
 

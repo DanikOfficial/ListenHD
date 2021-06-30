@@ -1,4 +1,13 @@
+body {
+  font-size: 90%;
+}
+
 .header-section {
+  .beautiful-girl,
+  .hero-text {
+    display: none;
+  }
+
   .responsive {
     display: none;
   }
@@ -31,10 +40,6 @@
     "right";
 }
 
-body {
-  font-size: 90%;
-}
-
 .overview-section {
   .long-text {
     width: 100%;
@@ -43,7 +48,7 @@ body {
 
   .box {
     max-width: 100%;
-    padding: 2em 3em;
+    padding: 2em 0;
   }
 
   .microphone,

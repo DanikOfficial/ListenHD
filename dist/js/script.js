@@ -52,8 +52,6 @@ function changeImage(name) {
 document.addEventListener("scroll", () => {
   const nav = document.querySelector(".main-nav");
 
-  console.log(window.scrollY);
-
   if (window.scrollY < 420 && stickyOn === true) {
     nav.classList.remove("sticky-nav");
     stickyOn = false;
