@@ -4,19 +4,41 @@ let stickyOn = false;
 
 document.querySelector(".colors").addEventListener("click", changeImage);
 
-document.addEventListener("scroll", handleStickyNav);
+document.addEventListener("scroll", () => {});
 
 document.querySelector(".menu-container").addEventListener("click", () => {
+  console.log(menuOpened);
+
   if (menuOpened) {
-    hideOrShow(true);
-    document.querySelector(".menu-container").classList.toggle("change");
+    hideNavigation();
   } else {
-    hideOrShow(false);
+    showNavigation();
   }
 });
 
-function hideOrShow(prop = false) {
-  document.querySelector(".menu-container").classList.toggle("change");
+document
+  .querySelector(".navigation .float-nav-links")
+  .addEventListener("click", (event) => {
+    const classList = Array.from(event.target.classList);
+    const classNames = classList.join(" ");
+
+    if (classNames.indexOf("normal") > -1) {
+      hideNavigation();
+    }
+  });
+
+function showNavigation() {
+  document.querySelector(".float-nav").classList.add("show");
+  document.body.style.overflow = "hidden";
+  menuOpened = true;
+  document.querySelector(".menu-container").classList.add("change");
+}
+
+function hideNavigation() {
+  document.querySelector(".float-nav").classList.remove("show");
+  document.body.style.overflow = "auto";
+  menuOpened = false;
+  document.querySelector(".menu-container").classList.remove("change");
 }
 
 function changeImage(event) {

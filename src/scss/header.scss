@@ -46,12 +46,19 @@ header {
   align-items: center;
   padding: 1em 3em 0;
 
+  .home {
+    .core-icon {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
   .menu-container {
     display: none;
     border: 2px solid #333;
     padding: 0.2em 0.3em;
     right: 0.4em;
-    z-index: 3;
+    z-index: 10;
   }
 
   .bar1,

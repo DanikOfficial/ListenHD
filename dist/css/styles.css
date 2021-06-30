@@ -443,12 +443,16 @@ header .beautiful-girl {
   padding: 1em 3em 0;
   /* ------ Site Core Logo ------*/
 }
+.main-nav .home .core-icon {
+  position: relative;
+  z-index: 10;
+}
 .main-nav .menu-container {
   display: none;
   border: 2px solid #333;
   padding: 0.2em 0.3em;
   right: 0.4em;
-  z-index: 3;
+  z-index: 10;
 }
 .main-nav .bar1,
 .main-nav .bar2,
@@ -470,9 +474,6 @@ header .beautiful-girl {
   -webkit-transform: rotate(45deg) translate(-4px, -6px);
   transform: rotate(45deg) translate(-4px, -6px);
 }
-.main-nav .home .core-icon {
-  height: 80px;
-}
 
 .sticky-nav {
   background-color: #fff;
@@ -484,9 +485,6 @@ header .beautiful-girl {
   z-index: 5;
   transition: 0.5s;
   box-shadow: 0 5px #e9e9e9;
-}
-.sticky-nav .home .core-icon {
-  height: 50px;
 }
 
 .main-nav-links {
@@ -944,6 +942,38 @@ header .beautiful-girl {
   margin-top: auto;
   margin-bottom: 1em;
   color: #e7e7e7;
+}
+
+.float-nav {
+  position: fixed;
+  display: flex;
+  transform: translate(100%, 0);
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  border-left: 1px solid #e2b902;
+  transition: 0.5s;
+  z-index: 3;
+}
+.float-nav .navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5em;
+  padding-left: 2em;
+}
+.float-nav .navigation img {
+  height: 80px;
+  align-self: center;
+  margin-bottom: 1em;
+}
+.float-nav .navigation ul {
+  list-style: none;
+}
+.float-nav .navigation ul li {
+  margin-bottom: 1em;
 }
 
 .show {
